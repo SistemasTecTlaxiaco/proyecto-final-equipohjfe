@@ -41,18 +41,13 @@ namespace Tienda
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.textBoxCodigoBarra = new System.Windows.Forms.TextBox();
             this.Consultar = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CodigoBarra = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewProductos = new System.Windows.Forms.ListView();
             this.buttonConsultar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxProductosConsulta = new System.Windows.Forms.ComboBox();
             this.Eliminar = new System.Windows.Forms.TabPage();
             this.Editar = new System.Windows.Forms.TabPage();
-            this.Existencias = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxEliminar = new System.Windows.Forms.ComboBox();
             this.comboBoxConsultarEditar = new System.Windows.Forms.ComboBox();
             this.textBoxCodigoEditar = new System.Windows.Forms.TextBox();
             this.textBoxDescripcionEditar = new System.Windows.Forms.TextBox();
@@ -62,9 +57,11 @@ namespace Tienda
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Agregar.SuspendLayout();
             this.Consultar.SuspendLayout();
@@ -81,7 +78,7 @@ namespace Tienda
             this.tabControl1.Location = new System.Drawing.Point(58, 82);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(641, 339);
+            this.tabControl1.Size = new System.Drawing.Size(712, 339);
             this.tabControl1.TabIndex = 0;
             // 
             // Agregar
@@ -179,53 +176,27 @@ namespace Tienda
             // 
             // Consultar
             // 
-            this.Consultar.Controls.Add(this.listView1);
+            this.Consultar.Controls.Add(this.listViewProductos);
             this.Consultar.Controls.Add(this.buttonConsultar);
             this.Consultar.Controls.Add(this.label5);
             this.Consultar.Controls.Add(this.comboBoxProductosConsulta);
             this.Consultar.Location = new System.Drawing.Point(4, 22);
             this.Consultar.Name = "Consultar";
             this.Consultar.Padding = new System.Windows.Forms.Padding(3);
-            this.Consultar.Size = new System.Drawing.Size(633, 313);
+            this.Consultar.Size = new System.Drawing.Size(704, 313);
             this.Consultar.TabIndex = 1;
             this.Consultar.Text = "Consultar";
             this.Consultar.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // listViewProductos
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.CodigoBarra,
-            this.Descripcion,
-            this.Precio,
-            this.Existencias});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(117, 147);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(422, 144);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // id
-            // 
-            this.id.Text = "id";
-            this.id.Width = 43;
-            // 
-            // CodigoBarra
-            // 
-            this.CodigoBarra.Text = "CodigoBarra";
-            this.CodigoBarra.Width = 77;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.Text = "Descripcion";
-            this.Descripcion.Width = 116;
-            // 
-            // Precio
-            // 
-            this.Precio.Text = "Precio";
-            this.Precio.Width = 59;
+            this.listViewProductos.HideSelection = false;
+            this.listViewProductos.Location = new System.Drawing.Point(6, 142);
+            this.listViewProductos.Name = "listViewProductos";
+            this.listViewProductos.Size = new System.Drawing.Size(621, 144);
+            this.listViewProductos.TabIndex = 3;
+            this.listViewProductos.UseCompatibleStateImageBehavior = false;
+            this.listViewProductos.View = System.Windows.Forms.View.Details;
             // 
             // buttonConsultar
             // 
@@ -256,7 +227,9 @@ namespace Tienda
             // 
             // Eliminar
             // 
-            this.Eliminar.Controls.Add(this.comboBox2);
+            this.Eliminar.Controls.Add(this.label11);
+            this.Eliminar.Controls.Add(this.buttonEliminar);
+            this.Eliminar.Controls.Add(this.comboBoxEliminar);
             this.Eliminar.Location = new System.Drawing.Point(4, 22);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Padding = new System.Windows.Forms.Padding(3);
@@ -269,7 +242,7 @@ namespace Tienda
             // 
             this.Editar.Controls.Add(this.label6);
             this.Editar.Controls.Add(this.button2);
-            this.Editar.Controls.Add(this.button1);
+            this.Editar.Controls.Add(this.buttonBuscar);
             this.Editar.Controls.Add(this.label10);
             this.Editar.Controls.Add(this.label9);
             this.Editar.Controls.Add(this.label8);
@@ -287,18 +260,13 @@ namespace Tienda
             this.Editar.Text = "Editar";
             this.Editar.UseVisualStyleBackColor = true;
             // 
-            // Existencias
+            // comboBoxEliminar
             // 
-            this.Existencias.Text = "Existencias";
-            this.Existencias.Width = 105;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(185, 58);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(342, 21);
-            this.comboBox2.TabIndex = 0;
+            this.comboBoxEliminar.FormattingEnabled = true;
+            this.comboBoxEliminar.Location = new System.Drawing.Point(185, 58);
+            this.comboBoxEliminar.Name = "comboBoxEliminar";
+            this.comboBoxEliminar.Size = new System.Drawing.Size(342, 21);
+            this.comboBoxEliminar.TabIndex = 0;
             // 
             // comboBoxConsultarEditar
             // 
@@ -372,15 +340,15 @@ namespace Tienda
             this.label7.TabIndex = 7;
             this.label7.Text = "Código";
             // 
-            // button1
+            // buttonBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(302, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonBuscar.Location = new System.Drawing.Point(302, 75);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.TabIndex = 11;
+            this.buttonBuscar.Text = "consultar";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -401,6 +369,25 @@ namespace Tienda
             this.label6.TabIndex = 13;
             this.label6.Text = "Producto";
             // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Location = new System.Drawing.Point(297, 106);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEliminar.TabIndex = 1;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(129, 66);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 13);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Producto";
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +403,7 @@ namespace Tienda
             this.Consultar.ResumeLayout(false);
             this.Consultar.PerformLayout();
             this.Eliminar.ResumeLayout(false);
+            this.Eliminar.PerformLayout();
             this.Editar.ResumeLayout(false);
             this.Editar.PerformLayout();
             this.ResumeLayout(false);
@@ -438,18 +426,13 @@ namespace Tienda
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewProductos;
         private System.Windows.Forms.Button buttonConsultar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxProductosConsulta;
-        private System.Windows.Forms.ColumnHeader id;
-        private System.Windows.Forms.ColumnHeader CodigoBarra;
-        private System.Windows.Forms.ColumnHeader Descripcion;
-        private System.Windows.Forms.ColumnHeader Precio;
-        private System.Windows.Forms.ColumnHeader Existencias;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxEliminar;
         private System.Windows.Forms.ComboBox comboBoxConsultarEditar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -460,5 +443,7 @@ namespace Tienda
         private System.Windows.Forms.TextBox textBoxCodigoEditar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -27,11 +27,18 @@ namespace Tienda
             textBoxDescripcion.Text = "";
             textBoxPrecio.Text = "";
             textBoxExistencias.Text = "";
+
             textBoxCodigoEditar.Text = "";
             textBoxDescripcionEditar.Text = "";
             textBoxValorEditar.Text = "";
             textBoxCantidadEditar.Text = "";
+
             comboBoxConsultarEditar.Text = "";
+            comboBoxProductosConsulta.Text = "";
+            comboBoxEliminar.Text = "";
+
+            listViewProductos.Clear();
+
         }
 
         public void buscar()
@@ -133,7 +140,7 @@ namespace Tienda
             lvItem.SubItems.Add(lstProducto[3].ToString());
             lvItem.SubItems.Add(lstProducto[4].ToString());
 
-            listView1.Items.Add(lvItem);
+            listViewProductos.Items.Add(lvItem);
 
         }
 
@@ -162,27 +169,57 @@ namespace Tienda
             }
         }
 
+        public void eliminar()
+        {
+            String sql = String.Format("delete from productos where idProducto= '{0}'", comboBoxEliminar.SelectedValue);
+
+            if (MessageBox.Show("Seguro que deseas eliminar este Producto?", "Eliminar Producto",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                  == DialogResult.Yes)
+            {
+                try
+                {
+                    if (conMysql.Query(sql) == 1)
+                    {
+                        MessageBox.Show("!!!... Producto Eliminado con éxito ...!!!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("!!!... ERROR, NO se pudo eliminar ...!!!");
+                    }
+
+                    Limpiar();
+                    conMysql.CargarCombo(comboBoxEliminar, sql, "descripcionProducto", "idProducto");
+                }
+                catch (MySql.Data.MySqlClient.MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+        }
+
         //Evento al cargar Formulario Productos
         private void Productos_Load(object sender, EventArgs e)
         {
             //Propiedades del ListView
-            listView1.View = View.Details;
-            listView1.GridLines = true;
-            listView1.FullRowSelect = true;
+            listViewProductos.View = View.Details;
+            listViewProductos.GridLines = true;
+            listViewProductos.FullRowSelect = true;
 
-            //Columnas
-            listView1.Columns.Add("id", 30, HorizontalAlignment.Left);
-            listView1.Columns.Add("CodigoBarra", 70, HorizontalAlignment.Left);
-            listView1.Columns.Add("Descripcion", 150, HorizontalAlignment.Left);
-            listView1.Columns.Add("Precio", 120, HorizontalAlignment.Left);
-            listView1.Columns.Add("Existencias", 120, HorizontalAlignment.Left);
+            //Agregar Descripcion a las Columnas y un tamaño
+            listViewProductos.Columns.Add("id", 30, HorizontalAlignment.Left);
+            listViewProductos.Columns.Add("CodigoBarra", 70, HorizontalAlignment.Left);
+            listViewProductos.Columns.Add("Descripcion", 150, HorizontalAlignment.Left);
+            listViewProductos.Columns.Add("Precio", 120, HorizontalAlignment.Left);
+            listViewProductos.Columns.Add("Existencias", 120, HorizontalAlignment.Left);
 
-            //cargar todos los comboBox con la desacripcion
+            //cargar todos los comboBox con la descripcion de productos
             conMysql.Conectar();
             String sql = "select idProducto, descripcionProducto from productos";
-            conMysql.CargarCombo(comboBoxProductosConsulta, sql, "descripcion", "idProducto");
-            conMysql.CargarCombo(comboBox2, sql, "descripcion", "idProducto");
-            conMysql.CargarCombo(comboBoxConsultarEditar, sql, "descripcion", "idProducto");
+            conMysql.CargarCombo(comboBoxProductosConsulta, sql, "descripcionProducto", "idProducto");
+            conMysql.CargarCombo(comboBoxEliminar, sql, "descripcionProducto", "idProducto");
+            conMysql.CargarCombo(comboBoxConsultarEditar, sql, "descripcionProducto", "idProducto");
         }
 
         private void buttonGuardar_Click(object sender, EventArgs e)
@@ -203,6 +240,11 @@ namespace Tienda
         private void button2_Click(object sender, EventArgs e)
         {
             editar();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            eliminar();
         }
     }
 }
