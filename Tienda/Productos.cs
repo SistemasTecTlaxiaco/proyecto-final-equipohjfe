@@ -13,7 +13,7 @@ namespace Tienda
     public partial class Productos : Form
     {
         //instancia la clase conexion
-        Conexion conMysql = new Conexion();
+        Conexion conexionBBD = new Conexion();
         DataRow lstProducto = null;
 
         public Productos()
@@ -44,7 +44,7 @@ namespace Tienda
         public void buscar()
         {
             String sql = "select * from productos where idProducto = " + comboBoxConsultarEditar.SelectedValue;
-            DataRow fila = conMysql.getRow(sql);
+            DataRow fila = conexionBBD.getRow(sql);
             if (fila != null)
             {
                 textBoxCodigoEditar.Text = fila["CodigoBarra"].ToString();
@@ -103,7 +103,7 @@ namespace Tienda
             try
             {
 
-                if (conMysql.Query(sql) == 1)
+                if (conexionBBD.Query(sql) == 1)
                 {
                     MessageBox.Show("Registro de Producto éxitoso");
                 }
@@ -125,7 +125,7 @@ namespace Tienda
         {
             //Agregar producto al listView1
 
-            lstProducto = conMysql.getRow("select * from productos where idProducto='" + comboBoxProductosConsulta.SelectedValue + "'");
+            lstProducto = conexionBBD.getRow("select * from productos where idProducto='" + comboBoxProductosConsulta.SelectedValue + "'");
 
             if (comboBoxProductosConsulta.SelectedValue == null)
             {
@@ -151,7 +151,7 @@ namespace Tienda
             try
             {
 
-                if (conMysql.Query(sql) == 1)
+                if (conexionBBD.Query(sql) == 1)
                 {
                     MessageBox.Show("!!!... Edicion de Producto éxitosa ...!!!");
                 }
@@ -179,7 +179,7 @@ namespace Tienda
             {
                 try
                 {
-                    if (conMysql.Query(sql) == 1)
+                    if (conexionBBD.Query(sql) == 1)
                     {
                         MessageBox.Show("!!!... Producto Eliminado con éxito ...!!!");
                     }
@@ -189,7 +189,7 @@ namespace Tienda
                     }
 
                     Limpiar();
-                    conMysql.CargarCombo(comboBoxEliminar, sql, "descripcionProducto", "idProducto");
+                    conexionBBD.CargarCombo(comboBoxEliminar, sql, "descripcionProducto", "idProducto");
                 }
                 catch (MySql.Data.MySqlClient.MySqlException ex)
                 {
@@ -215,11 +215,11 @@ namespace Tienda
             listViewProductos.Columns.Add("Existencias", 120, HorizontalAlignment.Left);
 
             //cargar todos los comboBox con la descripcion de productos
-            conMysql.Conectar();
+            conexionBBD.Conectar();
             String sql = "select idProducto, descripcionProducto from productos";
-            conMysql.CargarCombo(comboBoxProductosConsulta, sql, "descripcionProducto", "idProducto");
-            conMysql.CargarCombo(comboBoxEliminar, sql, "descripcionProducto", "idProducto");
-            conMysql.CargarCombo(comboBoxConsultarEditar, sql, "descripcionProducto", "idProducto");
+            conexionBBD.CargarCombo(comboBoxProductosConsulta, sql, "descripcionProducto", "idProducto");
+            conexionBBD.CargarCombo(comboBoxEliminar, sql, "descripcionProducto", "idProducto");
+            conexionBBD.CargarCombo(comboBoxConsultarEditar, sql, "descripcionProducto", "idProducto");
         }
 
         private void buttonGuardar_Click(object sender, EventArgs e)
