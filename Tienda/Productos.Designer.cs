@@ -41,19 +41,35 @@ namespace Tienda
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.textBoxCodigoBarra = new System.Windows.Forms.TextBox();
             this.Consultar = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CodigoBarra = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonConsultar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxProductosConsulta = new System.Windows.Forms.ComboBox();
             this.Eliminar = new System.Windows.Forms.TabPage();
             this.Editar = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.buttonConsultar = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Existencias = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxConsultarEditar = new System.Windows.Forms.ComboBox();
+            this.textBoxCodigoEditar = new System.Windows.Forms.TextBox();
+            this.textBoxDescripcionEditar = new System.Windows.Forms.TextBox();
+            this.textBoxValorEditar = new System.Windows.Forms.TextBox();
+            this.textBoxCantidadEditar = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Agregar.SuspendLayout();
             this.Consultar.SuspendLayout();
+            this.Eliminar.SuspendLayout();
+            this.Editar.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -166,7 +182,7 @@ namespace Tienda
             this.Consultar.Controls.Add(this.listView1);
             this.Consultar.Controls.Add(this.buttonConsultar);
             this.Consultar.Controls.Add(this.label5);
-            this.Consultar.Controls.Add(this.comboBox1);
+            this.Consultar.Controls.Add(this.comboBoxProductosConsulta);
             this.Consultar.Location = new System.Drawing.Point(4, 22);
             this.Consultar.Name = "Consultar";
             this.Consultar.Padding = new System.Windows.Forms.Padding(3);
@@ -175,42 +191,41 @@ namespace Tienda
             this.Consultar.Text = "Consultar";
             this.Consultar.UseVisualStyleBackColor = true;
             // 
-            // Eliminar
+            // listView1
             // 
-            this.Eliminar.Location = new System.Drawing.Point(4, 22);
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Padding = new System.Windows.Forms.Padding(3);
-            this.Eliminar.Size = new System.Drawing.Size(633, 313);
-            this.Eliminar.TabIndex = 2;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this.CodigoBarra,
+            this.Descripcion,
+            this.Precio,
+            this.Existencias});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(117, 147);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(422, 144);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // Editar
+            // id
             // 
-            this.Editar.Location = new System.Drawing.Point(4, 22);
-            this.Editar.Name = "Editar";
-            this.Editar.Padding = new System.Windows.Forms.Padding(3);
-            this.Editar.Size = new System.Drawing.Size(633, 313);
-            this.Editar.TabIndex = 3;
-            this.Editar.Text = "Editar";
-            this.Editar.UseVisualStyleBackColor = true;
+            this.id.Text = "id";
+            this.id.Width = 43;
             // 
-            // comboBox1
+            // CodigoBarra
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(234, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(278, 21);
-            this.comboBox1.TabIndex = 0;
+            this.CodigoBarra.Text = "CodigoBarra";
+            this.CodigoBarra.Width = 77;
             // 
-            // label5
+            // Descripcion
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(125, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Producto";
+            this.Descripcion.Text = "Descripcion";
+            this.Descripcion.Width = 116;
+            // 
+            // Precio
+            // 
+            this.Precio.Text = "Precio";
+            this.Precio.Width = 59;
             // 
             // buttonConsultar
             // 
@@ -222,36 +237,169 @@ namespace Tienda
             this.buttonConsultar.UseVisualStyleBackColor = true;
             this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
-            // listView1
+            // label5
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(72, 141);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(440, 144);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(125, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Producto";
             // 
-            // columnHeader1
+            // comboBoxProductosConsulta
             // 
-            this.columnHeader1.Width = 87;
+            this.comboBoxProductosConsulta.FormattingEnabled = true;
+            this.comboBoxProductosConsulta.Location = new System.Drawing.Point(181, 50);
+            this.comboBoxProductosConsulta.Name = "comboBoxProductosConsulta";
+            this.comboBoxProductosConsulta.Size = new System.Drawing.Size(446, 21);
+            this.comboBoxProductosConsulta.TabIndex = 0;
             // 
-            // columnHeader2
+            // Eliminar
             // 
-            this.columnHeader2.Width = 105;
+            this.Eliminar.Controls.Add(this.comboBox2);
+            this.Eliminar.Location = new System.Drawing.Point(4, 22);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Padding = new System.Windows.Forms.Padding(3);
+            this.Eliminar.Size = new System.Drawing.Size(633, 313);
+            this.Eliminar.TabIndex = 2;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = true;
             // 
-            // columnHeader3
+            // Editar
             // 
-            this.columnHeader3.Width = 168;
+            this.Editar.Controls.Add(this.label6);
+            this.Editar.Controls.Add(this.button2);
+            this.Editar.Controls.Add(this.button1);
+            this.Editar.Controls.Add(this.label10);
+            this.Editar.Controls.Add(this.label9);
+            this.Editar.Controls.Add(this.label8);
+            this.Editar.Controls.Add(this.label7);
+            this.Editar.Controls.Add(this.textBoxCantidadEditar);
+            this.Editar.Controls.Add(this.textBoxValorEditar);
+            this.Editar.Controls.Add(this.textBoxDescripcionEditar);
+            this.Editar.Controls.Add(this.textBoxCodigoEditar);
+            this.Editar.Controls.Add(this.comboBoxConsultarEditar);
+            this.Editar.Location = new System.Drawing.Point(4, 22);
+            this.Editar.Name = "Editar";
+            this.Editar.Padding = new System.Windows.Forms.Padding(3);
+            this.Editar.Size = new System.Drawing.Size(633, 313);
+            this.Editar.TabIndex = 3;
+            this.Editar.Text = "Editar";
+            this.Editar.UseVisualStyleBackColor = true;
             // 
-            // columnHeader4
+            // Existencias
             // 
-            this.columnHeader4.Width = 239;
+            this.Existencias.Text = "Existencias";
+            this.Existencias.Width = 105;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(185, 58);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(342, 21);
+            this.comboBox2.TabIndex = 0;
+            // 
+            // comboBoxConsultarEditar
+            // 
+            this.comboBoxConsultarEditar.FormattingEnabled = true;
+            this.comboBoxConsultarEditar.Location = new System.Drawing.Point(184, 48);
+            this.comboBoxConsultarEditar.Name = "comboBoxConsultarEditar";
+            this.comboBoxConsultarEditar.Size = new System.Drawing.Size(330, 21);
+            this.comboBoxConsultarEditar.TabIndex = 0;
+            // 
+            // textBoxCodigoEditar
+            // 
+            this.textBoxCodigoEditar.Location = new System.Drawing.Point(184, 123);
+            this.textBoxCodigoEditar.Name = "textBoxCodigoEditar";
+            this.textBoxCodigoEditar.Size = new System.Drawing.Size(330, 20);
+            this.textBoxCodigoEditar.TabIndex = 1;
+            // 
+            // textBoxDescripcionEditar
+            // 
+            this.textBoxDescripcionEditar.Location = new System.Drawing.Point(184, 171);
+            this.textBoxDescripcionEditar.Name = "textBoxDescripcionEditar";
+            this.textBoxDescripcionEditar.Size = new System.Drawing.Size(330, 20);
+            this.textBoxDescripcionEditar.TabIndex = 2;
+            // 
+            // textBoxValorEditar
+            // 
+            this.textBoxValorEditar.Location = new System.Drawing.Point(184, 215);
+            this.textBoxValorEditar.Name = "textBoxValorEditar";
+            this.textBoxValorEditar.Size = new System.Drawing.Size(330, 20);
+            this.textBoxValorEditar.TabIndex = 3;
+            // 
+            // textBoxCantidadEditar
+            // 
+            this.textBoxCantidadEditar.Location = new System.Drawing.Point(184, 256);
+            this.textBoxCantidadEditar.Name = "textBoxCantidadEditar";
+            this.textBoxCantidadEditar.Size = new System.Drawing.Size(330, 20);
+            this.textBoxCantidadEditar.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(100, 257);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Cantidad";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(99, 208);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Valor";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(93, 161);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Descripción";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(93, 112);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Código";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(302, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "consultar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(293, 282);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(108, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Guardar Cambios";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(100, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Producto";
             // 
             // Productos
             // 
@@ -261,11 +409,15 @@ namespace Tienda
             this.Controls.Add(this.tabControl1);
             this.Name = "Productos";
             this.Text = "Productos";
+            this.Load += new System.EventHandler(this.Productos_Load);
             this.tabControl1.ResumeLayout(false);
             this.Agregar.ResumeLayout(false);
             this.Agregar.PerformLayout();
             this.Consultar.ResumeLayout(false);
             this.Consultar.PerformLayout();
+            this.Eliminar.ResumeLayout(false);
+            this.Editar.ResumeLayout(false);
+            this.Editar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -289,10 +441,24 @@ namespace Tienda
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button buttonConsultar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ComboBox comboBoxProductosConsulta;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader CodigoBarra;
+        private System.Windows.Forms.ColumnHeader Descripcion;
+        private System.Windows.Forms.ColumnHeader Precio;
+        private System.Windows.Forms.ColumnHeader Existencias;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxConsultarEditar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxCantidadEditar;
+        private System.Windows.Forms.TextBox textBoxValorEditar;
+        private System.Windows.Forms.TextBox textBoxDescripcionEditar;
+        private System.Windows.Forms.TextBox textBoxCodigoEditar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
     }
 }

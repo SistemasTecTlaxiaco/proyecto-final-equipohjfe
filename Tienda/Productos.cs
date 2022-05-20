@@ -27,25 +27,30 @@ namespace Tienda
             textBoxDescripcion.Text = "";
             textBoxPrecio.Text = "";
             textBoxExistencias.Text = "";
+            textBoxCodigoEditar.Text = "";
+            textBoxDescripcionEditar.Text = "";
+            textBoxValorEditar.Text = "";
+            textBoxCantidadEditar.Text = "";
+            comboBoxConsultarEditar.Text = "";
         }
 
-        /*public void buscar()
+        public void buscar()
         {
-            String sql = "select * from productos where id = " + comboBox2.SelectedValue;
+            String sql = "select * from productos where idProducto = " + comboBoxConsultarEditar.SelectedValue;
             DataRow fila = conMysql.getRow(sql);
             if (fila != null)
             {
-                textBox5.Text = fila["codigo"].ToString();
-                textBox6.Text = fila["descripcion"].ToString();
-                textBox7.Text = fila["valor"].ToString();
-                textBox8.Text = fila["cantidad_inicial"].ToString();
-                comboBox2.Text = "";
+                textBoxCodigoEditar.Text = fila["CodigoBarra"].ToString();
+                textBoxDescripcionEditar.Text = fila["descripcionProducto"].ToString();
+                textBoxValorEditar.Text = fila["precioProducto"].ToString();
+                textBoxCantidadEditar.Text = fila["existenciasProductos"].ToString();
+                comboBoxConsultarEditar.Text = "";
             }
             else
             {
                 MessageBox.Show("El producto que buscas no existe");
             }
-        }*/
+        }
 
         public void guardar()
         {
@@ -100,7 +105,7 @@ namespace Tienda
                     MessageBox.Show("NO se pudo registar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
-                //limpiar();
+                Limpiar();
 
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -111,10 +116,11 @@ namespace Tienda
 
         public void addListView()
         {
+            //Agregar producto al listView1
 
-            lstProducto = conMysql.getRow("select * from productos where id='" + comboBox1.SelectedValue + "'");
+            lstProducto = conMysql.getRow("select * from productos where idProducto='" + comboBoxProductosConsulta.SelectedValue + "'");
 
-            if (comboBox1.SelectedValue == null)
+            if (comboBoxProductosConsulta.SelectedValue == null)
             {
                 MessageBox.Show("EL Producto que intentas mostrar, ya no se encuentra en nuestra base de datos");
             }
@@ -131,6 +137,32 @@ namespace Tienda
 
         }
 
+        public void editar()
+        {
+            String sql = String.Format("update productos set CodigoBarra='{0}', descripcionProducto='{1}', precioProducto='{2}', existenciasProductos='{3}' where idProducto='{4}'",
+                          textBoxCodigoEditar.Text.Trim(), textBoxDescripcionEditar.Text.Trim(), textBoxValorEditar.Text.Trim(), textBoxCantidadEditar.Text.Trim(), comboBoxConsultarEditar.SelectedValue);
+            try
+            {
+
+                if (conMysql.Query(sql) == 1)
+                {
+                    MessageBox.Show("!!!... Edicion de Producto éxitosa ...!!!");
+                }
+                else
+                {
+                    MessageBox.Show("!!!... ERROR, NO se pudo editar ...!!!");
+                }
+
+                Limpiar();
+
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //Evento al cargar Formulario Productos
         private void Productos_Load(object sender, EventArgs e)
         {
             //Propiedades del ListView
@@ -139,18 +171,18 @@ namespace Tienda
             listView1.FullRowSelect = true;
 
             //Columnas
-            listView1.Columns.Add("Id", 30, HorizontalAlignment.Left);
-            listView1.Columns.Add("Código", 70, HorizontalAlignment.Left);
-            listView1.Columns.Add("Descripción", 150, HorizontalAlignment.Left);
-            listView1.Columns.Add("Valor", 120, HorizontalAlignment.Left);
-            listView1.Columns.Add("Cantidad", 120, HorizontalAlignment.Left);
+            listView1.Columns.Add("id", 30, HorizontalAlignment.Left);
+            listView1.Columns.Add("CodigoBarra", 70, HorizontalAlignment.Left);
+            listView1.Columns.Add("Descripcion", 150, HorizontalAlignment.Left);
+            listView1.Columns.Add("Precio", 120, HorizontalAlignment.Left);
+            listView1.Columns.Add("Existencias", 120, HorizontalAlignment.Left);
 
-            //cargar comboBox
+            //cargar todos los comboBox con la desacripcion
             conMysql.Conectar();
-            String sql = "select id, descripcion from productos";
-            conMysql.CargarCombo(comboBox1, sql, "descripcion", "id");
-            conMysql.CargarCombo(comboBox2, sql, "descripcion", "id");
-            conMysql.CargarCombo(comboBox3, sql, "descripcion", "id");
+            String sql = "select idProducto, descripcionProducto from productos";
+            conMysql.CargarCombo(comboBoxProductosConsulta, sql, "descripcion", "idProducto");
+            conMysql.CargarCombo(comboBox2, sql, "descripcion", "idProducto");
+            conMysql.CargarCombo(comboBoxConsultarEditar, sql, "descripcion", "idProducto");
         }
 
         private void buttonGuardar_Click(object sender, EventArgs e)
@@ -161,6 +193,16 @@ namespace Tienda
         private void buttonConsultar_Click(object sender, EventArgs e)
         {
             addListView();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            editar();
         }
     }
 }
