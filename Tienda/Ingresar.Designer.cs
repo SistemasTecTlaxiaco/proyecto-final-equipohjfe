@@ -46,17 +46,18 @@ namespace Tienda
             // buttonIngresar
             // 
             buttonIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            buttonIngresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonIngresar.BackgroundImage")));
             buttonIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             buttonIngresar.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             buttonIngresar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(95)))), ((int)(((byte)(118)))));
+            buttonIngresar.Image = ((System.Drawing.Image)(resources.GetObject("buttonIngresar.Image")));
             buttonIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             buttonIngresar.Location = new System.Drawing.Point(95, 193);
             buttonIngresar.Name = "buttonIngresar";
             buttonIngresar.Size = new System.Drawing.Size(116, 34);
             buttonIngresar.TabIndex = 0;
             buttonIngresar.Text = "Aceptar";
+            buttonIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             buttonIngresar.UseVisualStyleBackColor = false;
             buttonIngresar.Click += new System.EventHandler(this.buttonIngresar_Click);
             // 
@@ -68,6 +69,7 @@ namespace Tienda
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(253, 21);
             this.textBoxContraseña.TabIndex = 2;
+            this.textBoxContraseña.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -104,14 +106,18 @@ namespace Tienda
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(95)))), ((int)(((byte)(118)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(241, 193);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 34);
             this.button1.TabIndex = 6;
             this.button1.Text = "Cancelar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // comboBoxUsuario
@@ -159,6 +165,7 @@ namespace Tienda
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxContraseña);
             this.Controls.Add(buttonIngresar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ingresar";
             this.Text = "Ingresar";
             this.TransparencyKey = System.Drawing.Color.Maroon;
