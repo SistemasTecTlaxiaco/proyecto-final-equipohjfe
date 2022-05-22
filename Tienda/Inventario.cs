@@ -20,10 +20,10 @@ namespace Tienda
 
         public void addProducto()
         {
-            String sql2 = "select codigo,valor,cantidad_inicial from productos where id=" + comboBox1.SelectedValue;
+            String sql2 = "select CodigoBarra,precioProducto,existenciasProdcutos from productos where id=" + comboBox1.SelectedValue;
             DataRow fila = conMysql.getRow(sql2);
 
-            String sql3 = (@"select cantidad as can_Vendidas from factura_detalle inner join productos on factura_detalle.producto_id=productos.id where productos.id=" + comboBox1.SelectedValue);
+            String sql3 = (@"select cantidad as can_Vendidas from detallesfactura inner join productos on detallesfactura.idProductos=id.Productos where id.Productos=" + comboBox1.SelectedValue);
             DataRow cant_vendidas = conMysql.getRow(sql3);
 
             if (sql3 == null)
@@ -54,11 +54,11 @@ namespace Tienda
             dataGridView1.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Set the column header names.
-            dataGridView1.Columns[0].Name = "Id_Producto";
-            dataGridView1.Columns[1].Name = "Codigo";
-            dataGridView1.Columns[2].Name = "Descripcion";
-            dataGridView1.Columns[3].Name = "Valor";
-            dataGridView1.Columns[4].Name = "Cant. Inicial";
+            dataGridView1.Columns[0].Name = "idProducto";
+            dataGridView1.Columns[1].Name = "CodigoBarra";
+            dataGridView1.Columns[2].Name = "descripcionProducto";
+            dataGridView1.Columns[3].Name = "precioProducto";
+            dataGridView1.Columns[4].Name = "existenciasProductos";
             dataGridView1.Columns[5].Name = "Cant. Vendidas";
             dataGridView1.Columns[6].Name = "Cant. Final";
 
@@ -74,8 +74,8 @@ namespace Tienda
 
             //cargar comboBox
             conMysql.Conectar();
-            String sql = "select id,descripcion from productos";
-            conMysql.CargarCombo(comboBox1, sql, "descripcion", "id");
+            String sql = "select idProducto,descripcionProducto from productos";
+            conMysql.CargarCombo(comboBox1, sql, "descripcionProductos", "idProducto");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
