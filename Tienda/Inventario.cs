@@ -23,7 +23,7 @@ namespace Tienda
             String sql2 = "select CodigoBarra,precioProducto,existenciasProductos from productos where idProducto=" + comboBox1.SelectedValue;
             DataRow fila = conMysql.getRow(sql2);
 
-            String sql3 = (@"select cantidad as can_Vendidas from detallesfactura inner join productos on detallesfactura.idProductos=productos.idProducto where productos.idProducto=" + comboBox1.SelectedValue);
+            String sql3 = (@"select cantidad as xyz from detallesfactura inner join productos on detallesfactura.idProductos=productos.idProducto where productos.idProducto=" + comboBox1.SelectedValue);
             DataRow cant_vendidas = conMysql.getRow(sql3);
 
             if (sql3 == null)
