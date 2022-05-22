@@ -20,10 +20,10 @@ namespace Tienda
 
         public void addProducto()
         {
-            String sql2 = "select CodigoBarra,precioProducto,existenciasProdcutos from productos where id=" + comboBox1.SelectedValue;
+            String sql2 = "select CodigoBarra,precioProducto,existenciasProductos from productos where idProducto=" + comboBox1.SelectedValue;
             DataRow fila = conMysql.getRow(sql2);
 
-            String sql3 = (@"select cantidad as can_Vendidas from detallesfactura inner join productos on detallesfactura.idProductos=id.Productos where id.Productos=" + comboBox1.SelectedValue);
+            String sql3 = (@"select cantidad as can_Vendidas from detallesfactura inner join productos on detallesfactura.idProductos=productos.idProducto where productos.idProducto=" + comboBox1.SelectedValue);
             DataRow cant_vendidas = conMysql.getRow(sql3);
 
             if (sql3 == null)
