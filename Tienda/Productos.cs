@@ -246,5 +246,15 @@ namespace Tienda
         {
             eliminar();
         }
+
+        private void comboBoxProductosConsulta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
