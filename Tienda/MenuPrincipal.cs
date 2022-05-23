@@ -20,28 +20,32 @@ namespace Tienda
         public void VerProductos()
         {
             Productos productos = new Productos();
-            //productos.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            productos.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            productos.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
             productos.Show();// Abrir el Foirmulario Productos
         }
 
         public void VerInventario()
         {
             Inventario inventario = new Inventario();
-            //productos.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            inventario.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            inventario.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
             inventario.Show();// Abrir el Foirmulario Productos
         }
 
         public void VerClientes()
         {
             Clientes clientes = new Clientes();
-            //productos.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            clientes.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            clientes.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
             clientes.Show();// Abrir el Foirmulario Productos
         }
 
         public void VerFacturas()
         {
             Factura factura = new Factura();
-            //productos.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            factura.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            factura.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
             factura.Show();// Abrir el Foirmulario Productos
         }
 

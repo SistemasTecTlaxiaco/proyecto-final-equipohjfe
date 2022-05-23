@@ -165,8 +165,10 @@ namespace Tienda
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxContraseña);
             this.Controls.Add(buttonIngresar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ingresar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar";
             this.TransparencyKey = System.Drawing.Color.Maroon;
             this.Load += new System.EventHandler(this.Ingresar_Load);

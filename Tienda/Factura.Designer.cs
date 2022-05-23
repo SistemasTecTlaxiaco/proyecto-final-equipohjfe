@@ -29,6 +29,7 @@ namespace Tienda
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.buttonGuardar = new System.Windows.Forms.Button();
@@ -64,15 +65,15 @@ namespace Tienda
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(25, 37);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(763, 377);
+            this.groupBox1.Size = new System.Drawing.Size(802, 450);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // buttonLimpiar
             // 
-            this.buttonLimpiar.Location = new System.Drawing.Point(415, 335);
+            this.buttonLimpiar.Location = new System.Drawing.Point(448, 360);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(75, 23);
             this.buttonLimpiar.TabIndex = 14;
@@ -82,7 +83,7 @@ namespace Tienda
             // 
             // buttonGuardar
             // 
-            this.buttonGuardar.Location = new System.Drawing.Point(527, 334);
+            this.buttonGuardar.Location = new System.Drawing.Point(560, 359);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
             this.buttonGuardar.TabIndex = 13;
@@ -92,14 +93,14 @@ namespace Tienda
             // 
             // textBoxTotal
             // 
-            this.textBoxTotal.Location = new System.Drawing.Point(231, 337);
+            this.textBoxTotal.Location = new System.Drawing.Point(264, 362);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(134, 20);
             this.textBoxTotal.TabIndex = 12;
             // 
             // buttonTotal
             // 
-            this.buttonTotal.Location = new System.Drawing.Point(116, 335);
+            this.buttonTotal.Location = new System.Drawing.Point(149, 360);
             this.buttonTotal.Name = "buttonTotal";
             this.buttonTotal.Size = new System.Drawing.Size(110, 23);
             this.buttonTotal.TabIndex = 10;
@@ -110,14 +111,14 @@ namespace Tienda
             // dataGridViewTabla
             // 
             this.dataGridViewTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTabla.Location = new System.Drawing.Point(83, 164);
+            this.dataGridViewTabla.Location = new System.Drawing.Point(73, 193);
             this.dataGridViewTabla.Name = "dataGridViewTabla";
-            this.dataGridViewTabla.Size = new System.Drawing.Size(530, 150);
+            this.dataGridViewTabla.Size = new System.Drawing.Size(651, 150);
             this.dataGridViewTabla.TabIndex = 9;
             // 
             // textBoxCantidad
             // 
-            this.textBoxCantidad.Location = new System.Drawing.Point(204, 131);
+            this.textBoxCantidad.Location = new System.Drawing.Point(237, 156);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(212, 20);
             this.textBoxCantidad.TabIndex = 8;
@@ -125,7 +126,7 @@ namespace Tienda
             // comboBoxProducto
             // 
             this.comboBoxProducto.FormattingEnabled = true;
-            this.comboBoxProducto.Location = new System.Drawing.Point(204, 88);
+            this.comboBoxProducto.Location = new System.Drawing.Point(237, 113);
             this.comboBoxProducto.Name = "comboBoxProducto";
             this.comboBoxProducto.Size = new System.Drawing.Size(212, 21);
             this.comboBoxProducto.TabIndex = 7;
@@ -133,21 +134,21 @@ namespace Tienda
             // comboBoxClientes
             // 
             this.comboBoxClientes.FormattingEnabled = true;
-            this.comboBoxClientes.Location = new System.Drawing.Point(204, 49);
+            this.comboBoxClientes.Location = new System.Drawing.Point(237, 74);
             this.comboBoxClientes.Name = "comboBoxClientes";
             this.comboBoxClientes.Size = new System.Drawing.Size(301, 21);
             this.comboBoxClientes.TabIndex = 6;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(204, 12);
+            this.dateTimePicker1.Location = new System.Drawing.Point(237, 37);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(301, 20);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // buttonAgregar
             // 
-            this.buttonAgregar.Location = new System.Drawing.Point(484, 103);
+            this.buttonAgregar.Location = new System.Drawing.Point(517, 128);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(100, 30);
             this.buttonAgregar.TabIndex = 4;
@@ -158,7 +159,7 @@ namespace Tienda
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(140, 131);
+            this.label5.Location = new System.Drawing.Point(173, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 3;
@@ -167,7 +168,7 @@ namespace Tienda
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(140, 91);
+            this.label4.Location = new System.Drawing.Point(173, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 2;
@@ -176,7 +177,7 @@ namespace Tienda
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 49);
+            this.label3.Location = new System.Drawing.Point(173, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 1;
@@ -185,7 +186,7 @@ namespace Tienda
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(140, 12);
+            this.label2.Location = new System.Drawing.Point(173, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 0;
@@ -195,9 +196,13 @@ namespace Tienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Factura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Factura";
             this.Load += new System.EventHandler(this.Factura_Load);
             this.groupBox1.ResumeLayout(false);
