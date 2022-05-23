@@ -17,8 +17,18 @@ namespace Tienda
             InitializeComponent();
         }
 
+        void CloseAll()
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Dispose();
+                frm.Close();
+            }
+        }
+
         public void VerProductos()
         {
+            CloseAll();
             Productos productos = new Productos();
             productos.MdiParent = this; //especificar que el formulario es un formulario secundario.
             productos.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
@@ -27,6 +37,7 @@ namespace Tienda
 
         public void VerInventario()
         {
+            CloseAll();
             Inventario inventario = new Inventario();
             inventario.MdiParent = this; //especificar que el formulario es un formulario secundario.
             inventario.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
@@ -35,6 +46,7 @@ namespace Tienda
 
         public void VerClientes()
         {
+            CloseAll();
             Clientes clientes = new Clientes();
             clientes.MdiParent = this; //especificar que el formulario es un formulario secundario.
             clientes.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
@@ -43,6 +55,7 @@ namespace Tienda
 
         public void VerFacturas()
         {
+            CloseAll();
             Factura factura = new Factura();
             factura.MdiParent = this; //especificar que el formulario es un formulario secundario.
             factura.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
