@@ -42,7 +42,7 @@ namespace Tienda
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(307, 24);
+            this.label1.Location = new System.Drawing.Point(423, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 39);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@ namespace Tienda
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(337, 86);
+            this.label2.Location = new System.Drawing.Point(453, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 28);
             this.label2.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace Tienda
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(268, 131);
+            this.comboBox1.Location = new System.Drawing.Point(384, 174);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(257, 21);
             this.comboBox1.TabIndex = 2;
@@ -70,14 +70,14 @@ namespace Tienda
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 202);
+            this.dataGridView1.Location = new System.Drawing.Point(128, 245);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(767, 218);
             this.dataGridView1.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(366, 158);
+            this.button1.Location = new System.Drawing.Point(482, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -90,7 +90,7 @@ namespace Tienda
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1090, 576);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);

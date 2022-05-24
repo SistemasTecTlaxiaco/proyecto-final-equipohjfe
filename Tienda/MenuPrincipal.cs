@@ -62,6 +62,33 @@ namespace Tienda
             factura.Show();// Abrir el Foirmulario Productos
         }
 
+        public void VerVentas()
+        {
+            CloseAll();
+            Ventas ventas = new Ventas();
+            ventas.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            ventas.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
+            ventas.Show();// Abrir el Foirmulario Productos
+        }
+
+        public void VerConfiguracion()
+        {
+            CloseAll();
+            Configuracion configuracion = new Configuracion();
+            configuracion.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            configuracion.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
+            configuracion.Show();// Abrir el Foirmulario Productos
+        }
+
+        public void VerCorte()
+        {
+            CloseAll();
+            Corte corte = new Corte();
+            corte.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            corte.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
+            corte.Show();// Abrir el Foirmulario Productos
+        }
+
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VerProductos();
@@ -80,6 +107,26 @@ namespace Tienda
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VerFacturas();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VerVentas();
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            VerVentas();
+        }
+
+        private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VerConfiguracion();
+        }
+
+        private void corteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VerCorte();
         }
     }
 }

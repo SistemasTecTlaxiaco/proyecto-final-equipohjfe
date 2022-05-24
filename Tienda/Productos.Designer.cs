@@ -95,7 +95,7 @@ namespace Tienda
             this.Agregar.Controls.Add(this.textBoxCodigoBarra);
             this.Agregar.Location = new System.Drawing.Point(4, 22);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Agregar.Padding = new System.Windows.Forms.Padding(3);
             this.Agregar.Size = new System.Drawing.Size(795, 426);
             this.Agregar.TabIndex = 0;
             this.Agregar.Text = "Agregar";
@@ -183,8 +183,8 @@ namespace Tienda
             this.Consultar.Controls.Add(this.comboBoxProductosConsulta);
             this.Consultar.Location = new System.Drawing.Point(4, 22);
             this.Consultar.Name = "Consultar";
-            this.Consultar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.Consultar.Size = new System.Drawing.Size(704, 313);
+            this.Consultar.Padding = new System.Windows.Forms.Padding(3);
+            this.Consultar.Size = new System.Drawing.Size(795, 426);
             this.Consultar.TabIndex = 1;
             this.Consultar.Text = "Consultar";
             this.Consultar.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@ namespace Tienda
             // listViewProductos
             // 
             this.listViewProductos.HideSelection = false;
-            this.listViewProductos.Location = new System.Drawing.Point(6, 142);
+            this.listViewProductos.Location = new System.Drawing.Point(73, 169);
             this.listViewProductos.Name = "listViewProductos";
             this.listViewProductos.Size = new System.Drawing.Size(621, 144);
             this.listViewProductos.TabIndex = 3;
@@ -235,8 +235,8 @@ namespace Tienda
             this.Eliminar.Controls.Add(this.comboBoxEliminar);
             this.Eliminar.Location = new System.Drawing.Point(4, 22);
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.Eliminar.Size = new System.Drawing.Size(704, 313);
+            this.Eliminar.Padding = new System.Windows.Forms.Padding(3);
+            this.Eliminar.Size = new System.Drawing.Size(795, 426);
             this.Eliminar.TabIndex = 2;
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.UseVisualStyleBackColor = true;
@@ -284,8 +284,8 @@ namespace Tienda
             this.Editar.Controls.Add(this.comboBoxConsultarEditar);
             this.Editar.Location = new System.Drawing.Point(4, 22);
             this.Editar.Name = "Editar";
-            this.Editar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.Editar.Size = new System.Drawing.Size(704, 313);
+            this.Editar.Padding = new System.Windows.Forms.Padding(3);
+            this.Editar.Size = new System.Drawing.Size(795, 426);
             this.Editar.TabIndex = 3;
             this.Editar.Text = "Editar";
             this.Editar.UseVisualStyleBackColor = true;
@@ -396,7 +396,7 @@ namespace Tienda
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1090, 576);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
