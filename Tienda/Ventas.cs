@@ -25,12 +25,11 @@ namespace Tienda
         public void addListView()
         {
             //Agregar producto al listView1
-            
-            lstProducto = conexionBBD.getRow("select * from productos where CodigoBarra='" + textBox1.Text + "'");
+            lstProducto = conexionBBD.getRow("select * from productos where CodigoBarra='" + codigoBarraText.Text + "'");
             Console.WriteLine(lstProducto);
 
 
-            if (textBox1.Text == null || lstProducto == null)
+            if (codigoBarraText.Text == null || lstProducto == null)
             {
                 MessageBox.Show("EL Producto que intentas mostrar, ya no se encuentra en nuestra base de datos");
             }
@@ -48,6 +47,7 @@ namespace Tienda
                 lvItem.SubItems.Add(lstProducto[4].ToString());
 
                 listView1.Items.Add(lvItem);
+                codigoBarraText.Text = "";
             }
         }
 

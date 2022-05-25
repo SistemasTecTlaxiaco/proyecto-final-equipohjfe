@@ -27,36 +27,18 @@ namespace Tienda
 
         public void Conectar()
         {
-            
-            
             if (databaseConnection.State == ConnectionState.Closed) // si el estado de la base de datos está cerrada, hacemos lo siguiente
             {
                 databaseConnection.ConnectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode={5}", server, port, user, password, database, sslM);
                 databaseConnection.Open(); // Abrimos la base de datos
-                Console.WriteLine("Conexion Exitosa");
-        
-            
-            
-            
             }
         }
 
         //Seleccionar
         public DataTable getData(string sql) // ***
-        
-        
-        
-        
         {
             this.Conectar();// Abrimos Conexion con la base de Datos
-            
             DataTable table = new DataTable();
-            
-            
-            
-            
-            
-            
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, databaseConnection);
             adapter.Fill(table);
             return table;
@@ -80,6 +62,11 @@ namespace Tienda
         {
             MySqlCommand command = new MySqlCommand(sql, databaseConnection);
             return command.ExecuteNonQuery();
+        }
+
+        public MySqlCommand Command(string query)
+        {
+            return new MySqlCommand(query, databaseConnection);
         }
 
         //Metodo para cargar comboBox
