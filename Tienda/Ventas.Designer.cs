@@ -95,6 +95,7 @@ namespace Tienda
             this.button3.Text = "Borrar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -109,17 +110,18 @@ namespace Tienda
             this.button4.Text = "Cobrar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(867, 508);
+            this.label2.Location = new System.Drawing.Point(864, 502);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 31);
+            this.label2.Size = new System.Drawing.Size(80, 37);
             this.label2.TabIndex = 6;
-            this.label2.Text = "$0.00";
+            this.label2.Text = "0.00";
             // 
             // listView1
             // 
@@ -159,9 +161,9 @@ namespace Tienda
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listView1;
         public System.Windows.Forms.TextBox codigoBarraText;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label label2;
     }
 }

@@ -174,6 +174,7 @@ namespace Tienda
             this.textBoxCodigoBarra.Name = "textBoxCodigoBarra";
             this.textBoxCodigoBarra.Size = new System.Drawing.Size(287, 20);
             this.textBoxCodigoBarra.TabIndex = 0;
+            this.textBoxCodigoBarra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCodigoBarra_KeyPress);
             // 
             // Consultar
             // 
@@ -382,6 +383,7 @@ namespace Tienda
             this.textBoxCodigoEditar.Name = "textBoxCodigoEditar";
             this.textBoxCodigoEditar.Size = new System.Drawing.Size(330, 20);
             this.textBoxCodigoEditar.TabIndex = 1;
+            this.textBoxCodigoEditar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCodigoEditar_KeyPress);
             // 
             // comboBoxConsultarEditar
             // 

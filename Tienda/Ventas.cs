@@ -49,6 +49,12 @@ namespace Tienda
                 listView1.Items.Add(lvItem);
                 codigoBarraText.Text = "";
             }
+            MostrarTotal();
+        }
+        public void Clean()
+        {
+            listView1.Clear();
+            label2.Text = "0.00";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,6 +62,17 @@ namespace Tienda
             addListView();
         }
 
+        public void MostrarTotal()
+        {
+            //Mostrar total
+            Double dblSuma = 0;
+
+            foreach (ListViewItem item in listView1.Items)
+            {
+                dblSuma += Convert.ToDouble(item.SubItems[4].Text);
+            }
+            label2.Text = dblSuma.ToString();
+        }
         private void Ventas_Load(object sender, EventArgs e)
         {
             //Propiedades del ListView
@@ -64,12 +81,12 @@ namespace Tienda
             listView1.FullRowSelect = true;
 
             //Agregar Descripcion a las Columnas y un tamaño
-            listView1.Columns.Add("CodigoBarra", 70, HorizontalAlignment.Left);
-            listView1.Columns.Add("Descripción del Producto", 150, HorizontalAlignment.Left);
-            listView1.Columns.Add("Precio Venta", 120, HorizontalAlignment.Left);
-            listView1.Columns.Add("Cant", 120, HorizontalAlignment.Left);
-            listView1.Columns.Add("Importe", 120, HorizontalAlignment.Left);
-            listView1.Columns.Add("Existencias", 120, HorizontalAlignment.Left);
+            listView1.Columns.Add("CodigoBarra", 150, HorizontalAlignment.Left);
+            listView1.Columns.Add("Descripción del Producto", 280, HorizontalAlignment.Left);
+            listView1.Columns.Add("Precio Venta", 90, HorizontalAlignment.Left);
+            listView1.Columns.Add("Cantidad", 90, HorizontalAlignment.Left);
+            listView1.Columns.Add("Importe", 90, HorizontalAlignment.Left);
+            listView1.Columns.Add("Existencias", 90, HorizontalAlignment.Left);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -84,6 +101,42 @@ namespace Tienda
         {
             Buscar buscar = new Buscar();
             buscar.ShowDialog();// Abrir el Foirmulario Productos
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems != null)
+            {
+                var message = MessageBox.Show(
+                    "Desea eliminar los elementos seleccionados?",
+                    "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                );
+
+                if (message == DialogResult.Yes)
+                {
+                    for (int i = 0; i < listView1.Items.Count; i++)
+                    {
+                        if (listView1.Items[i].Selected)
+                        {
+                            listView1.Items[i].Remove();
+                            i--;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debes sellecionar al menos un elemento", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            MostrarTotal();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Cobrar cobrar = new Cobrar();
+            cobrar.label1.Text = label2.Text;
+            cobrar.ShowDialog();// Abrir el Foirmulario Productos
         }
     }
 }

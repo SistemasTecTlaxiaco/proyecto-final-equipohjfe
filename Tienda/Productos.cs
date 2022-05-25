@@ -256,5 +256,23 @@ namespace Tienda
         {
 
         }
+
+        private void textBoxCodigoBarra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Lector codigo de barras
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                
+            }
+        }
+
+        private void textBoxCodigoEditar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Lector codigo de barras
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+            }
+        }
     }
 }
