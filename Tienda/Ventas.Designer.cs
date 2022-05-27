@@ -44,6 +44,7 @@ namespace Tienda
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.IDlabel = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.SuspendLayout();
             // 
             // label1
@@ -263,5 +264,6 @@ namespace Tienda
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label IDlabel;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

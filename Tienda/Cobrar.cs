@@ -75,6 +75,15 @@ namespace Tienda
             this.Close();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (Double.Parse(label1.Text) > 0)
+            {
+                Ventas ventas = Application.OpenForms.OfType<Ventas>().SingleOrDefault();
+                ventas.Imprimir();
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             Cambio();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
 
 namespace Tienda
 {
@@ -136,6 +137,54 @@ namespace Tienda
         {
             LoadVentas();
         }
+
+        public void Imprimir()
+        {
+            printDocument1 = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            printDocument1.PrinterSettings = ps;
+            printDocument1.PrintPage += ImprimirTicket;
+            printDocument1.Print();
+
+        }
+
+        void ImprimirTicket(object sender, PrintPageEventArgs e)
+        {
+            int width = 300;
+            int y = 15;
+            Font font = new Font("Consolas", 7, FontStyle.Regular, GraphicsUnit.Point);
+            //Image img = Image.FromFile(imagen);
+            //e.Graphics.DrawImage(img, new Rectangle(0, y += 20, 50, 100));
+            e.Graphics.DrawString("LA ECONÓMICA"                                          , font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("CALLE PRINCIPAL 123"                               , font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("COL. CENTRO",                                        font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("TELÉFONO (55) 123 45 67"                            , font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("RFC JIC980516AE0",                                   font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("                ",                                   font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("cant.     Descripcion      Importe", font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("==================================", font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                string cant = listView1.Items[i].SubItems[3].Text;
+                string desc= listView1.Items[i].SubItems[1].Text;
+                string subt = listView1.Items[i].SubItems[4].Text;
+                
+                const int MaxLength = 25;
+                if (desc.Length > MaxLength)
+                {
+                    desc = desc.Substring(0, MaxLength); 
+                }
+
+                String result = String.Format("{0} {1} {2}", cant.PadRight(2), desc.PadRight(25), " $ " + subt.PadRight(6));
+                Console.WriteLine(result);
+                e.Graphics.DrawString(result, font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            }
+            e.Graphics.DrawString("                ", font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("            No. de Articulos: "+ listView1.Items.Count,                                font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("            Total: $" + label2.Text,                                      font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+            e.Graphics.DrawString("    Gracias por su compra    ",                               font, Brushes.Black, new RectangleF(0, y += 20, width, 30));
+        }
+
 
         void LoadVentas()
         {
