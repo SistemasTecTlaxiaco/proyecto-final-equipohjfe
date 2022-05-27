@@ -66,6 +66,7 @@ namespace Tienda
         {
             CloseAll();
             Ventas ventas = new Ventas();
+            ventas.nombre2.Text = nombre.Text;
             ventas.MdiParent = this; //especificar que el formulario es un formulario secundario.
             ventas.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
             ventas.Show();// Abrir el Foirmulario Productos

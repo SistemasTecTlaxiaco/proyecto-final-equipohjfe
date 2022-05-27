@@ -38,23 +38,28 @@ namespace Tienda
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.comboBoxClientes = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nombre2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 51);
+            this.label1.Location = new System.Drawing.Point(27, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.Size = new System.Drawing.Size(133, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo del Producto:";
             // 
             // codigoBarraText
             // 
             this.codigoBarraText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigoBarraText.Location = new System.Drawing.Point(146, 40);
+            this.codigoBarraText.Location = new System.Drawing.Point(195, 49);
+            this.codigoBarraText.Margin = new System.Windows.Forms.Padding(4);
             this.codigoBarraText.Name = "codigoBarraText";
-            this.codigoBarraText.Size = new System.Drawing.Size(337, 31);
+            this.codigoBarraText.Size = new System.Drawing.Size(448, 37);
             this.codigoBarraText.TabIndex = 1;
             this.codigoBarraText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -62,9 +67,10 @@ namespace Tienda
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(489, 40);
+            this.button1.Location = new System.Drawing.Point(652, 49);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 34);
+            this.button1.Size = new System.Drawing.Size(161, 42);
             this.button1.TabIndex = 2;
             this.button1.Text = "Agregar Producto";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -75,9 +81,10 @@ namespace Tienda
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(50, 94);
+            this.button2.Location = new System.Drawing.Point(67, 116);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 41);
+            this.button2.Size = new System.Drawing.Size(156, 50);
             this.button2.TabIndex = 3;
             this.button2.Text = "Buscar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -88,9 +95,10 @@ namespace Tienda
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(175, 94);
+            this.button3.Location = new System.Drawing.Point(233, 116);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 41);
+            this.button3.Size = new System.Drawing.Size(152, 50);
             this.button3.TabIndex = 4;
             this.button3.Text = "Borrar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -103,9 +111,10 @@ namespace Tienda
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(725, 498);
+            this.button4.Location = new System.Drawing.Point(967, 613);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 41);
+            this.button4.Size = new System.Drawing.Size(165, 50);
             this.button4.TabIndex = 5;
             this.button4.Text = "Cobrar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -117,27 +126,60 @@ namespace Tienda
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(864, 502);
+            this.label2.Location = new System.Drawing.Point(1152, 618);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 37);
+            this.label2.Size = new System.Drawing.Size(97, 46);
             this.label2.TabIndex = 6;
             this.label2.Text = "0.00";
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(61, 170);
+            this.listView1.Location = new System.Drawing.Point(81, 209);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(925, 298);
+            this.listView1.Size = new System.Drawing.Size(1232, 366);
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // comboBoxClientes
+            // 
+            this.comboBoxClientes.FormattingEnabled = true;
+            this.comboBoxClientes.Location = new System.Drawing.Point(102, 664);
+            this.comboBoxClientes.Name = "comboBoxClientes";
+            this.comboBoxClientes.Size = new System.Drawing.Size(182, 24);
+            this.comboBoxClientes.TabIndex = 8;
+            this.comboBoxClientes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(938, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Le Atiende";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // nombre2
+            // 
+            this.nombre2.AutoSize = true;
+            this.nombre2.Location = new System.Drawing.Point(1040, 39);
+            this.nombre2.Name = "nombre2";
+            this.nombre2.Size = new System.Drawing.Size(53, 16);
+            this.nombre2.TabIndex = 10;
+            this.nombre2.Text = "nombre";
+            // 
             // Ventas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1090, 576);
+            this.ClientSize = new System.Drawing.Size(1453, 709);
+            this.Controls.Add(this.nombre2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBoxClientes);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
@@ -147,6 +189,7 @@ namespace Tienda
             this.Controls.Add(this.codigoBarraText);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ventas";
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.Ventas_Load);
@@ -165,5 +208,8 @@ namespace Tienda
         public System.Windows.Forms.TextBox codigoBarraText;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxClientes;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label nombre2;
     }
 }

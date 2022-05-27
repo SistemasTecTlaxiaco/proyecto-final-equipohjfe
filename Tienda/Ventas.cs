@@ -87,6 +87,11 @@ namespace Tienda
             listView1.Columns.Add("Cantidad", 90, HorizontalAlignment.Left);
             listView1.Columns.Add("Importe", 90, HorizontalAlignment.Left);
             listView1.Columns.Add("Existencias", 90, HorizontalAlignment.Left);
+
+            //cargar todos los comboBox con la descripcion de productos
+            conexionBBD.Conectar();
+            String sql = "select idClientes, nombre from clientes";
+            conexionBBD.CargarCombo(comboBoxClientes, sql, "nombre", "idClientes");
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -137,6 +142,16 @@ namespace Tienda
             Cobrar cobrar = new Cobrar();
             cobrar.label1.Text = label2.Text;
             cobrar.ShowDialog();// Abrir el Foirmulario Productos
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,6 +37,7 @@ namespace Tienda
             {
                 MessageBox.Show("Bienvenido: " + comboBoxUsuario.Text);
                 MenuPrincipal abrir = new MenuPrincipal();
+                abrir.nombre.Text = comboBoxUsuario.Text;
                 abrir.Show(); // Abrimos el Formulario MenuPrincipal
                 this.Hide(); // Cerramos el actual
             }
@@ -71,6 +72,11 @@ namespace Tienda
             {
                 IngresarForm();
             }
+        }
+
+        private void comboBoxUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
