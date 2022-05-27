@@ -29,40 +29,45 @@ namespace Tienda
 
         public void CobrarTotal()
         {
+            if (Double.Parse(label1.Text) > 0) {
+                Ventas ventas = Application.OpenForms.OfType<Ventas>().SingleOrDefault();
 
-            Ventas ventas = Application.OpenForms.OfType<Ventas>().SingleOrDefault();
+
+                String sql = String.Format("insert into factura (fecha,idCliente,valorTotal,idUsuario)" +
+                              " values('{0}','{1}','{2}','{3}')",
+                              DateTime.Now.ToString("yyyy-MM-dd"), Cliente, label1.Text, Usuario);
 
 
-            String sql = String.Format("insert into factura (fecha,idCliente,valorTotal,idUsuario)" +
-                          " values('{0}','{1}','{2}','{3}')",
-                          DateTime.Now.ToString("yyyy-MM-dd"), Cliente, label1.Text, Usuario);
-            
-
-            Console.WriteLine(sql);
-            try
-            {
-                if (conexionBBD.Query(sql) == 1)
+                Console.WriteLine(sql);
+                try
                 {
-                    MessageBox.Show("\n" + "!!!... Compra éxitoso ...!!!" + "\n" +
-                        "fecha: " + DateTime.Now.ToString("yyyy-MM-dd") + "\n" + "IDCliente: "+ Cliente + "    Cliente: " + clienteNombre
-                        + "\n" + "Total: " + label1.Text + "\n"+ "IDUsuario: "  + Usuario + "    Usuario: " + NombreUsuario + "\n");
-                    
-                    if (ventas != null)
+                    if (conexionBBD.Query(sql) == 1)
                     {
-                        ventas.UpdateCompras();
-                        ventas.Clean();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("!!!... ERROR Compra ...!!!");
-                }
+                        MessageBox.Show("\n" + "!!!... Compra éxitoso ...!!!" + "\n" +
+                            "fecha: " + DateTime.Now.ToString("yyyy-MM-dd") + "\n" + "IDCliente: " + Cliente + "    Cliente: " + clienteNombre
+                            + "\n" + "Total: " + label1.Text + "\n" + "IDUsuario: " + Usuario + "    Usuario: " + NombreUsuario + "\n");
 
+                        if (ventas != null)
+                        {
+                            ventas.UpdateCompras();
+                            ventas.Clean();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("!!!... ERROR Compra ...!!!");
+                    }
+
+                }
+                catch (MySql.Data.MySqlClient.MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-            }  
+                MessageBox.Show("No hay nada que comprar");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

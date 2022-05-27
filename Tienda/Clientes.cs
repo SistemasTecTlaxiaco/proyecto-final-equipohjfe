@@ -39,7 +39,7 @@ namespace Tienda
             comboBoxEliminar.Text = "";
 
             listViewClientes.Clear();
-
+            
         }
 
         public void buscar()
@@ -212,6 +212,11 @@ namespace Tienda
 
 
         private void Clientes_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        void LoadData()
         {
             // Propiedades del ListView
             listViewClientes.View = View.Details;

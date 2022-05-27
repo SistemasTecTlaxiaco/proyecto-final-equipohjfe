@@ -84,7 +84,7 @@ namespace Tienda
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(798, 446);
+            this.tabControl1.Size = new System.Drawing.Size(1088, 576);
             this.tabControl1.TabIndex = 1;
             // 
             // Agregar
@@ -104,7 +104,7 @@ namespace Tienda
             this.Agregar.Location = new System.Drawing.Point(4, 22);
             this.Agregar.Name = "Agregar";
             this.Agregar.Padding = new System.Windows.Forms.Padding(3);
-            this.Agregar.Size = new System.Drawing.Size(790, 420);
+            this.Agregar.Size = new System.Drawing.Size(1080, 550);
             this.Agregar.TabIndex = 0;
             this.Agregar.Text = "Agregar";
             this.Agregar.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@ namespace Tienda
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(196, 155);
+            this.lblDireccion.Location = new System.Drawing.Point(338, 202);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblDireccion.TabIndex = 28;
@@ -122,7 +122,7 @@ namespace Tienda
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(196, 189);
+            this.lblTelefono.Location = new System.Drawing.Point(338, 236);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 26;
@@ -130,7 +130,7 @@ namespace Tienda
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(265, 215);
+            this.txtCorreo.Location = new System.Drawing.Point(407, 262);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(287, 20);
             this.txtCorreo.TabIndex = 25;
@@ -138,7 +138,7 @@ namespace Tienda
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(196, 192);
+            this.lblUsuario.Location = new System.Drawing.Point(338, 239);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(0, 13);
             this.lblUsuario.TabIndex = 23;
@@ -146,7 +146,7 @@ namespace Tienda
             // lblemail
             // 
             this.lblemail.AutoSize = true;
-            this.lblemail.Location = new System.Drawing.Point(199, 215);
+            this.lblemail.Location = new System.Drawing.Point(341, 262);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(35, 13);
             this.lblemail.TabIndex = 22;
@@ -155,7 +155,7 @@ namespace Tienda
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(196, 125);
+            this.lblNombre.Location = new System.Drawing.Point(338, 172);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 15;
@@ -164,7 +164,7 @@ namespace Tienda
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Location = new System.Drawing.Point(196, 90);
+            this.lblCedula.Location = new System.Drawing.Point(338, 137);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(40, 13);
             this.lblCedula.TabIndex = 13;
@@ -172,38 +172,41 @@ namespace Tienda
             // 
             // buttonGuardar
             // 
-            this.buttonGuardar.Location = new System.Drawing.Point(369, 278);
+            this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
+            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGuardar.Location = new System.Drawing.Point(489, 325);
             this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
+            this.buttonGuardar.Size = new System.Drawing.Size(90, 36);
             this.buttonGuardar.TabIndex = 4;
             this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonGuardar.UseVisualStyleBackColor = true;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(265, 187);
+            this.txtTelefono.Location = new System.Drawing.Point(407, 234);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(287, 20);
             this.txtTelefono.TabIndex = 3;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(265, 152);
+            this.txtDireccion.Location = new System.Drawing.Point(407, 199);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(287, 20);
             this.txtDireccion.TabIndex = 2;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(265, 120);
+            this.txtNombre.Location = new System.Drawing.Point(407, 167);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(287, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(265, 88);
+            this.txtCedula.Location = new System.Drawing.Point(407, 135);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(287, 20);
             this.txtCedula.TabIndex = 0;
@@ -218,7 +221,7 @@ namespace Tienda
             this.Consultar.Location = new System.Drawing.Point(4, 22);
             this.Consultar.Name = "Consultar";
             this.Consultar.Padding = new System.Windows.Forms.Padding(3);
-            this.Consultar.Size = new System.Drawing.Size(790, 420);
+            this.Consultar.Size = new System.Drawing.Size(1080, 550);
             this.Consultar.TabIndex = 1;
             this.Consultar.Text = "Consultar";
             this.Consultar.UseVisualStyleBackColor = true;
@@ -226,7 +229,7 @@ namespace Tienda
             // listViewClientes
             // 
             this.listViewClientes.HideSelection = false;
-            this.listViewClientes.Location = new System.Drawing.Point(71, 177);
+            this.listViewClientes.Location = new System.Drawing.Point(206, 247);
             this.listViewClientes.Name = "listViewClientes";
             this.listViewClientes.Size = new System.Drawing.Size(621, 144);
             this.listViewClientes.TabIndex = 3;
@@ -235,18 +238,21 @@ namespace Tienda
             // 
             // buttonConsultar
             // 
-            this.buttonConsultar.Location = new System.Drawing.Point(362, 111);
+            this.buttonConsultar.Image = ((System.Drawing.Image)(resources.GetObject("buttonConsultar.Image")));
+            this.buttonConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonConsultar.Location = new System.Drawing.Point(471, 178);
             this.buttonConsultar.Name = "buttonConsultar";
-            this.buttonConsultar.Size = new System.Drawing.Size(75, 23);
+            this.buttonConsultar.Size = new System.Drawing.Size(106, 35);
             this.buttonConsultar.TabIndex = 2;
             this.buttonConsultar.Text = "Consultar";
+            this.buttonConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonConsultar.UseVisualStyleBackColor = true;
             this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(125, 50);
+            this.lblCliente.Location = new System.Drawing.Point(260, 120);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 1;
@@ -255,7 +261,7 @@ namespace Tienda
             // CboxClienteConsulta
             // 
             this.CboxClienteConsulta.FormattingEnabled = true;
-            this.CboxClienteConsulta.Location = new System.Drawing.Point(181, 50);
+            this.CboxClienteConsulta.Location = new System.Drawing.Point(316, 120);
             this.CboxClienteConsulta.Name = "CboxClienteConsulta";
             this.CboxClienteConsulta.Size = new System.Drawing.Size(446, 21);
             this.CboxClienteConsulta.TabIndex = 0;
@@ -269,7 +275,7 @@ namespace Tienda
             this.Eliminar.Location = new System.Drawing.Point(4, 22);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Padding = new System.Windows.Forms.Padding(3);
-            this.Eliminar.Size = new System.Drawing.Size(790, 420);
+            this.Eliminar.Size = new System.Drawing.Size(1080, 550);
             this.Eliminar.TabIndex = 2;
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.UseVisualStyleBackColor = true;
@@ -277,7 +283,7 @@ namespace Tienda
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(182, 176);
+            this.label11.Location = new System.Drawing.Point(318, 219);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 13);
             this.label11.TabIndex = 4;
@@ -285,18 +291,21 @@ namespace Tienda
             // 
             // buttonEliminar
             // 
-            this.buttonEliminar.Location = new System.Drawing.Point(350, 216);
+            this.buttonEliminar.Image = ((System.Drawing.Image)(resources.GetObject("buttonEliminar.Image")));
+            this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEliminar.Location = new System.Drawing.Point(493, 254);
             this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEliminar.Size = new System.Drawing.Size(97, 39);
             this.buttonEliminar.TabIndex = 1;
             this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonEliminar.UseVisualStyleBackColor = true;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // comboBoxEliminar
             // 
             this.comboBoxEliminar.FormattingEnabled = true;
-            this.comboBoxEliminar.Location = new System.Drawing.Point(238, 168);
+            this.comboBoxEliminar.Location = new System.Drawing.Point(374, 211);
             this.comboBoxEliminar.Name = "comboBoxEliminar";
             this.comboBoxEliminar.Size = new System.Drawing.Size(342, 21);
             this.comboBoxEliminar.TabIndex = 0;
@@ -320,7 +329,7 @@ namespace Tienda
             this.Editar.Location = new System.Drawing.Point(4, 22);
             this.Editar.Name = "Editar";
             this.Editar.Padding = new System.Windows.Forms.Padding(3);
-            this.Editar.Size = new System.Drawing.Size(790, 420);
+            this.Editar.Size = new System.Drawing.Size(1080, 550);
             this.Editar.TabIndex = 3;
             this.Editar.Text = "Editar";
             this.Editar.UseVisualStyleBackColor = true;
@@ -328,7 +337,7 @@ namespace Tienda
             // 
             // txtCorreoEditar
             // 
-            this.txtCorreoEditar.Location = new System.Drawing.Point(242, 271);
+            this.txtCorreoEditar.Location = new System.Drawing.Point(355, 329);
             this.txtCorreoEditar.Name = "txtCorreoEditar";
             this.txtCorreoEditar.Size = new System.Drawing.Size(330, 20);
             this.txtCorreoEditar.TabIndex = 15;
@@ -336,7 +345,7 @@ namespace Tienda
             // lblCorreroeditar
             // 
             this.lblCorreroeditar.AutoSize = true;
-            this.lblCorreroeditar.Location = new System.Drawing.Point(151, 273);
+            this.lblCorreroeditar.Location = new System.Drawing.Point(264, 331);
             this.lblCorreroeditar.Name = "lblCorreroeditar";
             this.lblCorreroeditar.Size = new System.Drawing.Size(38, 13);
             this.lblCorreroeditar.TabIndex = 14;
@@ -345,7 +354,7 @@ namespace Tienda
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(158, 78);
+            this.label6.Location = new System.Drawing.Point(271, 136);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 13;
@@ -353,28 +362,34 @@ namespace Tienda
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(351, 304);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(449, 365);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 23);
+            this.button2.Size = new System.Drawing.Size(136, 40);
             this.button2.TabIndex = 12;
             this.button2.Text = "Guardar Cambios";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(360, 97);
+            this.buttonBuscar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscar.Image")));
+            this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscar.Location = new System.Drawing.Point(473, 155);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(82, 31);
             this.buttonBuscar.TabIndex = 11;
             this.buttonBuscar.Text = "consultar";
+            this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = true;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // lbltelefonoeditar
             // 
             this.lbltelefonoeditar.AutoSize = true;
-            this.lbltelefonoeditar.Location = new System.Drawing.Point(151, 239);
+            this.lbltelefonoeditar.Location = new System.Drawing.Point(264, 297);
             this.lbltelefonoeditar.Name = "lbltelefonoeditar";
             this.lbltelefonoeditar.Size = new System.Drawing.Size(49, 13);
             this.lbltelefonoeditar.TabIndex = 10;
@@ -383,7 +398,7 @@ namespace Tienda
             // lbldireccioneditar
             // 
             this.lbldireccioneditar.AutoSize = true;
-            this.lbldireccioneditar.Location = new System.Drawing.Point(151, 206);
+            this.lbldireccioneditar.Location = new System.Drawing.Point(264, 264);
             this.lbldireccioneditar.Name = "lbldireccioneditar";
             this.lbldireccioneditar.Size = new System.Drawing.Size(52, 13);
             this.lbldireccioneditar.TabIndex = 9;
@@ -392,7 +407,7 @@ namespace Tienda
             // lblNombreeditar
             // 
             this.lblNombreeditar.AutoSize = true;
-            this.lblNombreeditar.Location = new System.Drawing.Point(151, 170);
+            this.lblNombreeditar.Location = new System.Drawing.Point(264, 228);
             this.lblNombreeditar.Name = "lblNombreeditar";
             this.lblNombreeditar.Size = new System.Drawing.Size(44, 13);
             this.lblNombreeditar.TabIndex = 8;
@@ -401,7 +416,7 @@ namespace Tienda
             // lblcedulaeditar
             // 
             this.lblcedulaeditar.AutoSize = true;
-            this.lblcedulaeditar.Location = new System.Drawing.Point(151, 134);
+            this.lblcedulaeditar.Location = new System.Drawing.Point(264, 192);
             this.lblcedulaeditar.Name = "lblcedulaeditar";
             this.lblcedulaeditar.Size = new System.Drawing.Size(40, 13);
             this.lblcedulaeditar.TabIndex = 7;
@@ -409,28 +424,28 @@ namespace Tienda
             // 
             // txtTelefonoEditar
             // 
-            this.txtTelefonoEditar.Location = new System.Drawing.Point(242, 236);
+            this.txtTelefonoEditar.Location = new System.Drawing.Point(355, 294);
             this.txtTelefonoEditar.Name = "txtTelefonoEditar";
             this.txtTelefonoEditar.Size = new System.Drawing.Size(330, 20);
             this.txtTelefonoEditar.TabIndex = 4;
             // 
             // txtDireccionEditar
             // 
-            this.txtDireccionEditar.Location = new System.Drawing.Point(242, 203);
+            this.txtDireccionEditar.Location = new System.Drawing.Point(355, 261);
             this.txtDireccionEditar.Name = "txtDireccionEditar";
             this.txtDireccionEditar.Size = new System.Drawing.Size(330, 20);
             this.txtDireccionEditar.TabIndex = 3;
             // 
             // txtNombreEditar
             // 
-            this.txtNombreEditar.Location = new System.Drawing.Point(242, 167);
+            this.txtNombreEditar.Location = new System.Drawing.Point(355, 225);
             this.txtNombreEditar.Name = "txtNombreEditar";
             this.txtNombreEditar.Size = new System.Drawing.Size(330, 20);
             this.txtNombreEditar.TabIndex = 2;
             // 
             // txtCedulaEditar
             // 
-            this.txtCedulaEditar.Location = new System.Drawing.Point(242, 134);
+            this.txtCedulaEditar.Location = new System.Drawing.Point(355, 192);
             this.txtCedulaEditar.Name = "txtCedulaEditar";
             this.txtCedulaEditar.Size = new System.Drawing.Size(330, 20);
             this.txtCedulaEditar.TabIndex = 1;
@@ -438,7 +453,7 @@ namespace Tienda
             // comboBoxConsultarEditar
             // 
             this.comboBoxConsultarEditar.FormattingEnabled = true;
-            this.comboBoxConsultarEditar.Location = new System.Drawing.Point(242, 70);
+            this.comboBoxConsultarEditar.Location = new System.Drawing.Point(355, 128);
             this.comboBoxConsultarEditar.Name = "comboBoxConsultarEditar";
             this.comboBoxConsultarEditar.Size = new System.Drawing.Size(330, 21);
             this.comboBoxConsultarEditar.TabIndex = 0;
