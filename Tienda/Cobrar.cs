@@ -44,7 +44,7 @@ namespace Tienda
                     MessageBox.Show("\n" + "!!!... Compra éxitoso ...!!!" + "\n" +
                         "fecha: " + DateTime.Now.ToString("yyyy-MM-dd") + "\n" + "IDCliente: "+ Cliente + "    Cliente: " + clienteNombre
                         + "\n" + "Total: " + label1.Text + "\n"+ "IDUsuario: "  + Usuario + "    Usuario: " + NombreUsuario + "\n");
-
+                    
                     if (ventas != null)
                     {
                         ventas.Clean();

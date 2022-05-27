@@ -17,10 +17,27 @@ namespace Tienda
         Conexion conexionBBD = new Conexion();
         DataRow lstProducto = null;
         public string idUsuario;
+        public int posRepetido;
 
         public Ventas()
         {
             InitializeComponent();
+        }
+        bool ComprobarRepetido(string barraProductoActual)
+        {
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                Console.WriteLine(listView1.Items.Count);
+                string item = listView1.Items[i].SubItems[0].Text;
+                Console.WriteLine(item);
+                Console.WriteLine(barraProductoActual);
+                if (item == barraProductoActual)
+                {
+                    posRepetido = i;
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void addListView()
@@ -29,33 +46,53 @@ namespace Tienda
             lstProducto = conexionBBD.getRow("select * from productos where CodigoBarra='" + codigoBarraText.Text + "'");
             Console.WriteLine(lstProducto);
 
-
             if (codigoBarraText.Text == null || lstProducto == null)
             {
                 MessageBox.Show("EL Producto que intentas mostrar, ya no se encuentra en nuestra base de datos");
+            }else if(Int32.Parse(lstProducto[4].ToString()) > 0)// si las existencias son mayor que cero
+            {
+                string barraProductoActual = lstProducto[1].ToString();
+                if (ComprobarRepetido(barraProductoActual))// comprobar que no haya repetidos
+                {
+                    int cant = Int32.Parse(listView1.Items[posRepetido].SubItems[3].Text);
+                    int exist = Int32.Parse(lstProducto[4].ToString());
+                    if (cant < exist)//comprobar que no exeda la cantidad
+                    {
+                        cant++;
+                        listView1.Items[posRepetido].SubItems[3].Text = cant.ToString();
+                    }
+                    else if (cant >= exist)
+                    {
+                        MessageBox.Show("No hay mas productos del que necesita");
+                    } 
+                }
+                else
+                {
+                    ListViewItem lvItem = new ListViewItem();
+                    int cantidad = 1;
+                    float venta = float.Parse((lstProducto[3].ToString()));
+
+                    lvItem.SubItems[0].Text = lstProducto[1].ToString();//Codigobarra
+                    lvItem.SubItems.Add(lstProducto[2].ToString());//Descripcion
+                    lvItem.SubItems.Add(lstProducto[3].ToString());//precio venta
+                    lvItem.SubItems.Add(cantidad.ToString());//cantidad
+                    lvItem.SubItems.Add((venta * cantidad).ToString());//precio subtotal
+                    lvItem.SubItems.Add(lstProducto[4].ToString());//existencias
+                    listView1.Items.Add(lvItem);
+                }
             }
             else
             {
-                ListViewItem lvItem = new ListViewItem();
-                int cantidad = 1;
-                float venta = float.Parse((lstProducto[3].ToString()));
-
-                lvItem.SubItems[0].Text = lstProducto[1].ToString();
-                lvItem.SubItems.Add(lstProducto[2].ToString());
-                lvItem.SubItems.Add(lstProducto[3].ToString());
-                lvItem.SubItems.Add(cantidad.ToString());
-                lvItem.SubItems.Add((venta * cantidad).ToString());
-                lvItem.SubItems.Add(lstProducto[4].ToString());
-
-                listView1.Items.Add(lvItem);
-                codigoBarraText.Text = "";
+                MessageBox.Show("Inventario insuficiente");
             }
+            codigoBarraText.Text = "";
             MostrarTotal();
         }
         public void Clean()
         {
             listView1.Clear();
             label2.Text = "0.00";
+            LoadVentas();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,6 +112,11 @@ namespace Tienda
             label2.Text = dblSuma.ToString();
         }
         private void Ventas_Load(object sender, EventArgs e)
+        {
+            LoadVentas();
+        }
+
+        void LoadVentas()
         {
             //Propiedades del ListView
             listView1.View = View.Details;
@@ -97,7 +139,6 @@ namespace Tienda
             //String sql2 = "select idUsuario, Usuario from usuarios";
             //conexionBBD.CargarCombo(IDlabel, sql2, "Usuario", "idUsuario");
             IDlabel.Text = idUsuario;
-
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
