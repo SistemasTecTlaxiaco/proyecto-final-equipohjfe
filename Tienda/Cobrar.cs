@@ -14,9 +14,11 @@ namespace Tienda
     {
         //instancia la clase conexion
         Conexion conexionBBD = new Conexion();
+        public string Cliente, clienteNombre, Usuario, NombreUsuario;
         public Cobrar()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,13 +35,15 @@ namespace Tienda
 
             String sql = String.Format("insert into factura (fecha,idCliente,valorTotal,idUsuario)" +
                           " values('{0}','{1}','{2}','{3}')",
-                          DateTime.Now.ToString("yyyy-MM-dd"), "0", label1.Text, "User");//falta asignar cliente relacional
+                          DateTime.Now.ToString("yyyy-MM-dd"), Cliente, label1.Text, Usuario);
             Console.WriteLine(sql);
             try
             {
                 if (conexionBBD.Query(sql) == 1)
                 {
-                    MessageBox.Show("!!!... Compra éxitoso ...!!!");
+                    MessageBox.Show("\n" + "!!!... Compra éxitoso ...!!!" + "\n" +
+                        "fecha: " + DateTime.Now.ToString("yyyy-MM-dd") + "\n" + "IDCliente: "+ Cliente + "    Cliente: " + clienteNombre
+                        + "\n" + "Total: " + label1.Text + "\n"+ "IDUsuario: "  + Usuario + "    Usuario: " + NombreUsuario + "\n");
 
                     if (ventas != null)
                     {

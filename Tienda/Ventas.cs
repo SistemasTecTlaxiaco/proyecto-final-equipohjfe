@@ -16,6 +16,7 @@ namespace Tienda
         //instancia la clase conexion
         Conexion conexionBBD = new Conexion();
         DataRow lstProducto = null;
+        public string idUsuario;
 
         public Ventas()
         {
@@ -92,12 +93,17 @@ namespace Tienda
             conexionBBD.Conectar();
             String sql = "select idClientes, nombre from clientes";
             conexionBBD.CargarCombo(comboBoxClientes, sql, "nombre", "idClientes");
+
+            //String sql2 = "select idUsuario, Usuario from usuarios";
+            //conexionBBD.CargarCombo(IDlabel, sql2, "Usuario", "idUsuario");
+            IDlabel.Text = idUsuario;
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Lector codigo de barras
-            if (e.KeyChar == (char)Keys.Enter){
+            if (e.KeyChar == (char)Keys.Enter) {
                 addListView();
             }
         }
@@ -140,6 +146,11 @@ namespace Tienda
         private void button4_Click(object sender, EventArgs e)
         {
             Cobrar cobrar = new Cobrar();
+            cobrar.Cliente = comboBoxClientes.SelectedValue.ToString();
+            Console.WriteLine("clienteSelect " + comboBoxClientes.Text);//Obtener el id
+            cobrar.Usuario = idUsuario;
+            cobrar.clienteNombre = comboBoxClientes.Text;
+            cobrar.NombreUsuario = nombre2.Text;
             cobrar.label1.Text = label2.Text;
             cobrar.ShowDialog();// Abrir el Foirmulario Productos
         }
@@ -150,6 +161,11 @@ namespace Tienda
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

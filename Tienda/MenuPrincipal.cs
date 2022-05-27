@@ -12,6 +12,7 @@ namespace Tienda
 {
     public partial class MenuPrincipal : Form
     {
+        public string idUsuario;
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -67,6 +68,7 @@ namespace Tienda
             CloseAll();
             Ventas ventas = new Ventas();
             ventas.nombre2.Text = nombre.Text;
+            ventas.idUsuario = idUsuario;
             ventas.MdiParent = this; //especificar que el formulario es un formulario secundario.
             ventas.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
             ventas.Show();// Abrir el Foirmulario Productos

@@ -14,6 +14,7 @@ namespace Tienda
     public partial class Ingresar : Form
     {
         Conexion conectar = new Conexion();//Creamos un Objecto conectar de la clase Conexion
+        public string idUsuario;
         public Ingresar()
         {
             InitializeComponent();
@@ -32,14 +33,16 @@ namespace Tienda
             //Seleccionamos el Usuario y Contraseña de la tabla usuarios, donde Usuario = textBoxUsuario y Contraseña = textBoxContraseña
             String sql1 = String.Format(@"select Usuario,Contraseña from usuarios where Usuario='" + comboBoxUsuario.Text + "' and Contraseña='" + textBoxContraseña.Text + "'");
             DataRow fila = conectar.getRow(sql1);// ***
-
             if (fila != null)// ***
             {
                 MessageBox.Show("Bienvenido: " + comboBoxUsuario.Text);
                 MenuPrincipal abrir = new MenuPrincipal();
                 abrir.nombre.Text = comboBoxUsuario.Text;
+                abrir.idUsuario = comboBoxUsuario.SelectedValue.ToString();
                 abrir.Show(); // Abrimos el Formulario MenuPrincipal
                 this.Hide(); // Cerramos el actual
+                Console.WriteLine("Id_usuario: "+idUsuario);
+                //cobrar(comboBoxUsuario);
             }
 
             else
@@ -58,7 +61,9 @@ namespace Tienda
             //cargar todos los comboBox con la descripcion de productos
             conectar.Conectar();
             String sql = "select idUsuario, Usuario from usuarios";
+            //idUsuario = sql;
             conectar.CargarCombo(comboBoxUsuario, sql, "Usuario", "idUsuario");
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

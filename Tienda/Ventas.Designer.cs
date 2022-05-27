@@ -41,6 +41,9 @@ namespace Tienda
             this.comboBoxClientes = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.nombre2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.IDlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -126,7 +129,7 @@ namespace Tienda
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(1152, 618);
+            this.label2.Location = new System.Drawing.Point(1216, 613);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 46);
@@ -146,7 +149,7 @@ namespace Tienda
             // comboBoxClientes
             // 
             this.comboBoxClientes.FormattingEnabled = true;
-            this.comboBoxClientes.Location = new System.Drawing.Point(102, 664);
+            this.comboBoxClientes.Location = new System.Drawing.Point(81, 634);
             this.comboBoxClientes.Name = "comboBoxClientes";
             this.comboBoxClientes.Size = new System.Drawing.Size(182, 24);
             this.comboBoxClientes.TabIndex = 8;
@@ -165,11 +168,41 @@ namespace Tienda
             // nombre2
             // 
             this.nombre2.AutoSize = true;
-            this.nombre2.Location = new System.Drawing.Point(1040, 39);
+            this.nombre2.Location = new System.Drawing.Point(1050, 39);
             this.nombre2.Name = "nombre2";
             this.nombre2.Size = new System.Drawing.Size(53, 16);
             this.nombre2.TabIndex = 10;
             this.nombre2.Text = "nombre";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label6.Location = new System.Drawing.Point(1169, 609);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 54);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "$";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(78, 609);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Asignar Cliente";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // IDlabel
+            // 
+            this.IDlabel.AutoSize = true;
+            this.IDlabel.Location = new System.Drawing.Point(1016, 39);
+            this.IDlabel.Name = "IDlabel";
+            this.IDlabel.Size = new System.Drawing.Size(20, 16);
+            this.IDlabel.TabIndex = 13;
+            this.IDlabel.Text = "ID";
             // 
             // Ventas
             // 
@@ -177,6 +210,9 @@ namespace Tienda
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1453, 709);
+            this.Controls.Add(this.IDlabel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.nombre2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxClientes);
@@ -211,5 +247,8 @@ namespace Tienda
         private System.Windows.Forms.ComboBox comboBoxClientes;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label nombre2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label IDlabel;
     }
 }
