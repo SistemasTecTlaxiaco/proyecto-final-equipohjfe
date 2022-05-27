@@ -28,7 +28,7 @@ namespace Tienda
             for (int i = 0; i < listView1.Items.Count; i++)
             {
                 Console.WriteLine(listView1.Items.Count);
-                string item = listView1.Items[i].SubItems[0].Text;
+                string item = listView1.Items[i].SubItems[0].Text;// codigo barra en listView
                 Console.WriteLine(item);
                 Console.WriteLine(barraProductoActual);
                 if (item == barraProductoActual)
@@ -38,6 +38,26 @@ namespace Tienda
                 }
             }
             return false;
+        }
+
+        public void UpdateCompras()
+        {
+
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                int cantRest = Int32.Parse(listView1.Items[i].SubItems[3].Text);// cantidada a comprar en listView
+                int ex = Int32.Parse(listView1.Items[i].SubItems[5].Text);// existencia en listView
+                int idList = Int32.Parse(listView1.Items[i].SubItems[6].Text);// id en listView
+                String sql = String.Format("UPDATE `productos` SET `existenciasProductos` =" + "'" + (ex - cantRest) + "'" + " WHERE `productos`.`idProducto` =" + idList);
+                if (conexionBBD.Query(sql) == 1)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("ERROR Al modificar base de datos");
+                }
+            }
         }
 
         public void addListView()
@@ -78,6 +98,7 @@ namespace Tienda
                     lvItem.SubItems.Add(cantidad.ToString());//cantidad
                     lvItem.SubItems.Add((venta * cantidad).ToString());//precio subtotal
                     lvItem.SubItems.Add(lstProducto[4].ToString());//existencias
+                    lvItem.SubItems.Add(lstProducto[0].ToString());//id
                     listView1.Items.Add(lvItem);
                 }
             }

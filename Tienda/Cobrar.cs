@@ -36,6 +36,8 @@ namespace Tienda
             String sql = String.Format("insert into factura (fecha,idCliente,valorTotal,idUsuario)" +
                           " values('{0}','{1}','{2}','{3}')",
                           DateTime.Now.ToString("yyyy-MM-dd"), Cliente, label1.Text, Usuario);
+            
+
             Console.WriteLine(sql);
             try
             {
@@ -47,6 +49,7 @@ namespace Tienda
                     
                     if (ventas != null)
                     {
+                        ventas.UpdateCompras();
                         ventas.Clean();
                     }
                 }
