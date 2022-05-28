@@ -41,7 +41,9 @@ namespace Tienda
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelDescripcion = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -146,12 +148,21 @@ namespace Tienda
             // nombre
             // 
             this.nombre.AutoSize = true;
-            this.nombre.Location = new System.Drawing.Point(959, 19);
+            this.nombre.Location = new System.Drawing.Point(943, 20);
             this.nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(42, 13);
             this.nombre.TabIndex = 4;
             this.nombre.Text = "nombre";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(854, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 32);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // MenuPrincipal
             // 
@@ -159,6 +170,7 @@ namespace Tienda
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1090, 624);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.labelDescripcion);
             this.Controls.Add(this.menuStrip1);
@@ -173,6 +185,7 @@ namespace Tienda
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +203,6 @@ namespace Tienda
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label labelDescripcion;
         public System.Windows.Forms.Label nombre;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
