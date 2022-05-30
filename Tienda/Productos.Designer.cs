@@ -95,7 +95,7 @@ namespace Tienda
             this.Agregar.Controls.Add(this.textBoxCodigoBarra);
             this.Agregar.Location = new System.Drawing.Point(4, 22);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Padding = new System.Windows.Forms.Padding(3);
+            this.Agregar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Agregar.Size = new System.Drawing.Size(1082, 552);
             this.Agregar.TabIndex = 0;
             this.Agregar.Text = "Agregar";
@@ -106,7 +106,7 @@ namespace Tienda
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(367, 281);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Existencias";
             // 
@@ -115,7 +115,7 @@ namespace Tienda
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(367, 226);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Precio";
             // 
@@ -124,7 +124,7 @@ namespace Tienda
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(364, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Descripcion";
             // 
@@ -133,7 +133,7 @@ namespace Tienda
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(364, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Codigo de Barra";
             // 
@@ -141,7 +141,7 @@ namespace Tienda
             // 
             this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
             this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardar.Location = new System.Drawing.Point(551, 320);
+            this.buttonGuardar.Location = new System.Drawing.Point(550, 320);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(101, 34);
             this.buttonGuardar.TabIndex = 4;
@@ -154,28 +154,28 @@ namespace Tienda
             // 
             this.textBoxExistencias.Location = new System.Drawing.Point(465, 269);
             this.textBoxExistencias.Name = "textBoxExistencias";
-            this.textBoxExistencias.Size = new System.Drawing.Size(287, 20);
+            this.textBoxExistencias.Size = new System.Drawing.Size(287, 22);
             this.textBoxExistencias.TabIndex = 3;
             // 
             // textBoxPrecio
             // 
             this.textBoxPrecio.Location = new System.Drawing.Point(465, 220);
             this.textBoxPrecio.Name = "textBoxPrecio";
-            this.textBoxPrecio.Size = new System.Drawing.Size(287, 20);
+            this.textBoxPrecio.Size = new System.Drawing.Size(287, 22);
             this.textBoxPrecio.TabIndex = 2;
             // 
             // textBoxDescripcion
             // 
             this.textBoxDescripcion.Location = new System.Drawing.Point(465, 166);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(287, 20);
+            this.textBoxDescripcion.Size = new System.Drawing.Size(287, 22);
             this.textBoxDescripcion.TabIndex = 1;
             // 
             // textBoxCodigoBarra
             // 
             this.textBoxCodigoBarra.Location = new System.Drawing.Point(465, 114);
             this.textBoxCodigoBarra.Name = "textBoxCodigoBarra";
-            this.textBoxCodigoBarra.Size = new System.Drawing.Size(287, 20);
+            this.textBoxCodigoBarra.Size = new System.Drawing.Size(287, 22);
             this.textBoxCodigoBarra.TabIndex = 0;
             this.textBoxCodigoBarra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCodigoBarra_KeyPress);
             // 
@@ -185,10 +185,10 @@ namespace Tienda
             this.Consultar.Controls.Add(this.buttonConsultar);
             this.Consultar.Controls.Add(this.label5);
             this.Consultar.Controls.Add(this.comboBoxProductosConsulta);
-            this.Consultar.Location = new System.Drawing.Point(4, 22);
+            this.Consultar.Location = new System.Drawing.Point(4, 24);
             this.Consultar.Name = "Consultar";
-            this.Consultar.Padding = new System.Windows.Forms.Padding(3);
-            this.Consultar.Size = new System.Drawing.Size(1082, 552);
+            this.Consultar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Consultar.Size = new System.Drawing.Size(1082, 550);
             this.Consultar.TabIndex = 1;
             this.Consultar.Text = "Consultar";
             this.Consultar.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@ namespace Tienda
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(246, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "Producto";
             // 
@@ -240,10 +240,10 @@ namespace Tienda
             this.Eliminar.Controls.Add(this.label11);
             this.Eliminar.Controls.Add(this.buttonEliminar);
             this.Eliminar.Controls.Add(this.comboBoxEliminar);
-            this.Eliminar.Location = new System.Drawing.Point(4, 22);
+            this.Eliminar.Location = new System.Drawing.Point(4, 24);
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Padding = new System.Windows.Forms.Padding(3);
-            this.Eliminar.Size = new System.Drawing.Size(1082, 552);
+            this.Eliminar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Eliminar.Size = new System.Drawing.Size(1082, 550);
             this.Eliminar.TabIndex = 2;
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.UseVisualStyleBackColor = true;
@@ -253,7 +253,7 @@ namespace Tienda
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(309, 214);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 13);
+            this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 4;
             this.label11.Text = "Producto";
             // 
@@ -292,10 +292,10 @@ namespace Tienda
             this.Editar.Controls.Add(this.textBoxDescripcionEditar);
             this.Editar.Controls.Add(this.textBoxCodigoEditar);
             this.Editar.Controls.Add(this.comboBoxConsultarEditar);
-            this.Editar.Location = new System.Drawing.Point(4, 22);
+            this.Editar.Location = new System.Drawing.Point(4, 24);
             this.Editar.Name = "Editar";
-            this.Editar.Padding = new System.Windows.Forms.Padding(3);
-            this.Editar.Size = new System.Drawing.Size(1082, 552);
+            this.Editar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Editar.Size = new System.Drawing.Size(1082, 550);
             this.Editar.TabIndex = 3;
             this.Editar.Text = "Editar";
             this.Editar.UseVisualStyleBackColor = true;
@@ -305,7 +305,7 @@ namespace Tienda
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(329, 122);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "Producto";
             // 
@@ -313,7 +313,7 @@ namespace Tienda
             // 
             this.button2.Image = global::Tienda.Properties.Resources.disquete;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(505, 360);
+            this.button2.Location = new System.Drawing.Point(506, 361);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 34);
             this.button2.TabIndex = 12;
@@ -340,7 +340,7 @@ namespace Tienda
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(329, 323);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "Cantidad";
             // 
@@ -349,7 +349,7 @@ namespace Tienda
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(328, 274);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 9;
             this.label9.Text = "Valor";
             // 
@@ -358,16 +358,16 @@ namespace Tienda
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(322, 227);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.Size = new System.Drawing.Size(66, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "Descripción";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(322, 178);
+            this.label7.Location = new System.Drawing.Point(322, 179);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "Código";
             // 
@@ -375,28 +375,28 @@ namespace Tienda
             // 
             this.textBoxCantidadEditar.Location = new System.Drawing.Point(413, 322);
             this.textBoxCantidadEditar.Name = "textBoxCantidadEditar";
-            this.textBoxCantidadEditar.Size = new System.Drawing.Size(330, 20);
+            this.textBoxCantidadEditar.Size = new System.Drawing.Size(330, 22);
             this.textBoxCantidadEditar.TabIndex = 4;
             // 
             // textBoxValorEditar
             // 
             this.textBoxValorEditar.Location = new System.Drawing.Point(413, 281);
             this.textBoxValorEditar.Name = "textBoxValorEditar";
-            this.textBoxValorEditar.Size = new System.Drawing.Size(330, 20);
+            this.textBoxValorEditar.Size = new System.Drawing.Size(330, 22);
             this.textBoxValorEditar.TabIndex = 3;
             // 
             // textBoxDescripcionEditar
             // 
             this.textBoxDescripcionEditar.Location = new System.Drawing.Point(413, 237);
             this.textBoxDescripcionEditar.Name = "textBoxDescripcionEditar";
-            this.textBoxDescripcionEditar.Size = new System.Drawing.Size(330, 20);
+            this.textBoxDescripcionEditar.Size = new System.Drawing.Size(330, 22);
             this.textBoxDescripcionEditar.TabIndex = 2;
             // 
             // textBoxCodigoEditar
             // 
             this.textBoxCodigoEditar.Location = new System.Drawing.Point(413, 189);
             this.textBoxCodigoEditar.Name = "textBoxCodigoEditar";
-            this.textBoxCodigoEditar.Size = new System.Drawing.Size(330, 20);
+            this.textBoxCodigoEditar.Size = new System.Drawing.Size(330, 22);
             this.textBoxCodigoEditar.TabIndex = 1;
             this.textBoxCodigoEditar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCodigoEditar_KeyPress);
             // 
@@ -413,8 +413,9 @@ namespace Tienda
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1090, 576);
+            this.ClientSize = new System.Drawing.Size(1090, 575);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Productos";

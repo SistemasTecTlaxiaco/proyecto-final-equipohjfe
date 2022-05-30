@@ -115,7 +115,7 @@ namespace Tienda
             this.label6.Location = new System.Drawing.Point(182, 76);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 44);
+            this.label6.Size = new System.Drawing.Size(40, 44);
             this.label6.TabIndex = 9;
             this.label6.Text = "$";
             // 
@@ -202,6 +202,7 @@ namespace Tienda
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Cobrar";

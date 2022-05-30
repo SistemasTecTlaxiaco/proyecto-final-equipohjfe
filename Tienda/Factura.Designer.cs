@@ -65,6 +65,7 @@ namespace Tienda
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1090, 577);
@@ -95,7 +96,7 @@ namespace Tienda
             // 
             this.textBoxTotal.Location = new System.Drawing.Point(393, 452);
             this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.Size = new System.Drawing.Size(134, 20);
+            this.textBoxTotal.Size = new System.Drawing.Size(134, 22);
             this.textBoxTotal.TabIndex = 12;
             // 
             // buttonTotal
@@ -120,7 +121,7 @@ namespace Tienda
             // 
             this.textBoxCantidad.Location = new System.Drawing.Point(366, 199);
             this.textBoxCantidad.Name = "textBoxCantidad";
-            this.textBoxCantidad.Size = new System.Drawing.Size(212, 20);
+            this.textBoxCantidad.Size = new System.Drawing.Size(212, 22);
             this.textBoxCantidad.TabIndex = 8;
             // 
             // comboBoxProducto
@@ -143,7 +144,7 @@ namespace Tienda
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(366, 80);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(301, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(301, 22);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // buttonAgregar
@@ -161,7 +162,7 @@ namespace Tienda
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(302, 199);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Cantidad";
             // 
@@ -170,7 +171,7 @@ namespace Tienda
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(302, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Producto";
             // 
@@ -179,7 +180,7 @@ namespace Tienda
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(302, 117);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Cliente";
             // 
@@ -188,7 +189,7 @@ namespace Tienda
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(302, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Fecha";
             // 
