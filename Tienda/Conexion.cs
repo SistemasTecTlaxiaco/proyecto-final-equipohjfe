@@ -18,7 +18,7 @@ namespace Tienda
         public string port = "3306"; // Puerto de MySQL
         public string sslM = "none";
 
-       MySqlConnection databaseConnection = new MySqlConnection();
+        MySqlConnection databaseConnection = new MySqlConnection();
 
         public Conexion()
         {
@@ -32,6 +32,13 @@ namespace Tienda
                 databaseConnection.ConnectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode={5}", server, port, user, password, database, sslM);
                 databaseConnection.Open(); // Abrimos la base de datos
             }
+        }
+
+        public string LastInsertedId(string sql)
+        {
+            MySqlCommand comm = new MySqlCommand(sql, databaseConnection);
+            comm.ExecuteNonQuery();              // Execute the command
+            return comm.LastInsertedId.ToString();       // Get the ID of the inserted item
         }
 
         //Seleccionar

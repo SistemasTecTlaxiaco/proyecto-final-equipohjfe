@@ -126,7 +126,7 @@ namespace Tienda
             this.label6.Location = new System.Drawing.Point(877, 495);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 44);
+            this.label6.Size = new System.Drawing.Size(41, 44);
             this.label6.TabIndex = 11;
             this.label6.Text = "$";
             // 
@@ -269,7 +269,6 @@ namespace Tienda
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ListView listView1;
         public System.Windows.Forms.TextBox codigoBarraText;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label label2;
@@ -281,5 +280,6 @@ namespace Tienda
         public System.Windows.Forms.Label IDlabel;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.ListView listView1;
     }
 }

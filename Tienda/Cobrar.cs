@@ -37,25 +37,25 @@ namespace Tienda
                               " values('{0}','{1}','{2}','{3}')",
                               DateTime.Now.ToString("yyyy-MM-dd"), Cliente, label1.Text, Usuario);
 
-
                 Console.WriteLine(sql);
                 try
                 {
-                    if (conexionBBD.Query(sql) == 1)
-                    {
-                        MessageBox.Show("\n" + "!!!... Compra éxitoso ...!!!" + "\n" +
-                            "fecha: " + DateTime.Now.ToString("yyyy-MM-dd") + "\n" + "IDCliente: " + Cliente + "    Cliente: " + clienteNombre
-                            + "\n" + "Total: " + label1.Text + "\n" + "IDUsuario: " + Usuario + "    Usuario: " + NombreUsuario + "\n");
-
-                        if (ventas != null)
-                        {
-                            ventas.UpdateCompras();
-                            ventas.Clean();
-                        }
+                     string idFactura = conexionBBD.LastInsertedId(sql);
+                        
+                    for (int i = 0; i< ventas.listView1.Items.Count; i++) {//insertar en tabla de detalles factura las compras
+                        String sql2 = String.Format("insert into detallesfactura (idFactura,idProductos,cantidad)" +
+                                " values('{0}','{1}','{2}')", idFactura, Int32.Parse(ventas.listView1.Items[i].SubItems[6].Text), Int32.Parse(ventas.listView1.Items[i].SubItems[3].Text));
+                        conexionBBD.Query(sql2);
                     }
-                    else
+
+                    MessageBox.Show("\n" + "!!!... Compra éxitoso ...!!!" + "\n" +
+                        "fecha: " + DateTime.Now.ToString("yyyy-MM-dd") + "\n" + "IDCliente: " + Cliente + "    Cliente: " + clienteNombre
+                        + "\n" + "Total: " + label1.Text + "\n" + "IDUsuario: " + Usuario + "    Usuario: " + NombreUsuario + "\n");
+
+                    if (ventas != null)
                     {
-                        MessageBox.Show("!!!... ERROR Compra ...!!!");
+                        ventas.UpdateCompras();
+                        ventas.Clean();
                     }
 
                 }
@@ -79,8 +79,10 @@ namespace Tienda
         {
             if (Double.Parse(label1.Text) > 0)
             {
+                CobrarTotal();
                 Ventas ventas = Application.OpenForms.OfType<Ventas>().SingleOrDefault();
                 ventas.Imprimir();
+                this.Close();
             }
         }
 
