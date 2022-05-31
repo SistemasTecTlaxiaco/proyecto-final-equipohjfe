@@ -74,43 +74,53 @@ namespace Tienda
             // 
             // buttonLimpiar
             // 
+            this.buttonLimpiar.Image = global::Tienda.Properties.Resources.borrar;
+            this.buttonLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLimpiar.Location = new System.Drawing.Point(577, 450);
             this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.buttonLimpiar.Size = new System.Drawing.Size(90, 37);
             this.buttonLimpiar.TabIndex = 14;
             this.buttonLimpiar.Text = "Limpiar";
+            this.buttonLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonLimpiar.UseVisualStyleBackColor = true;
             this.buttonLimpiar.Click += new System.EventHandler(this.button4_Click);
             // 
             // buttonGuardar
             // 
+            this.buttonGuardar.Image = global::Tienda.Properties.Resources.disquete;
+            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonGuardar.Location = new System.Drawing.Point(689, 449);
             this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
+            this.buttonGuardar.Size = new System.Drawing.Size(94, 38);
             this.buttonGuardar.TabIndex = 13;
             this.buttonGuardar.Text = "Guardar ";
+            this.buttonGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonGuardar.UseVisualStyleBackColor = true;
             this.buttonGuardar.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBoxTotal
             // 
-            this.textBoxTotal.Location = new System.Drawing.Point(393, 452);
+            this.textBoxTotal.Location = new System.Drawing.Point(406, 465);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(134, 22);
             this.textBoxTotal.TabIndex = 12;
             // 
             // buttonTotal
             // 
-            this.buttonTotal.Location = new System.Drawing.Point(278, 450);
+            this.buttonTotal.Image = ((System.Drawing.Image)(resources.GetObject("buttonTotal.Image")));
+            this.buttonTotal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTotal.Location = new System.Drawing.Point(245, 450);
             this.buttonTotal.Name = "buttonTotal";
-            this.buttonTotal.Size = new System.Drawing.Size(110, 23);
+            this.buttonTotal.Size = new System.Drawing.Size(119, 36);
             this.buttonTotal.TabIndex = 10;
             this.buttonTotal.Text = "Total factura";
+            this.buttonTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonTotal.UseVisualStyleBackColor = true;
             this.buttonTotal.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridViewTabla
             // 
+            this.dataGridViewTabla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(209)))));
             this.dataGridViewTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTabla.Location = new System.Drawing.Point(202, 263);
             this.dataGridViewTabla.Name = "dataGridViewTabla";
@@ -149,11 +159,14 @@ namespace Tienda
             // 
             // buttonAgregar
             // 
+            this.buttonAgregar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAgregar.Image")));
+            this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAgregar.Location = new System.Drawing.Point(646, 171);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(100, 30);
             this.buttonAgregar.TabIndex = 4;
             this.buttonAgregar.Text = "Agregar";
+            this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAgregar.UseVisualStyleBackColor = true;
             this.buttonAgregar.Click += new System.EventHandler(this.button1_Click);
             // 

@@ -276,22 +276,19 @@
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALEAAACxAcYtSY0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAB4ElEQVRIS+2U30vCUBTHfSwsAnvooT8iisKCnkqiTNzubPSLStTKQCIr3FZQBkpB0HuP0T8RVARF
-        9OOtJ5UeCuq9iJIg63a2jjKvF2HaS9AXPmxsZ597OTub7T+/EkmKdYqiegy8Aa+iqBwJgubE29UFREMg
-        /QQow6cgqATLKovXG6sH0QsjNvMsy/E6LLceQVDGONIiCFFGsNx6oD3LPKkZaFMUy62HEHWcJ2UYxXLr
-        IURrBMEzIzShPMly1IHllQWnKFcqV3OwAQnLqgsukjXJs9A+GW9XHhjTdlHUDkD4ZZLngWvagSSttGG5
-        teAEfTDSIoisUUlTvuRd9TqYSo5N3Gzb8fHygYeXWFkJMzHqv4zTUDpp5jF4u9mKGn4kSe0AQdmde8Ql
-        OnW+zsrzZKIPO7WoKw32nCvO078QNmTkNEK9Jz/ng4ch6lCbjPPpTJL/dXs8q80g4L3QAm73Ah2Izxki
-        XV4zb6fO/X5aC0d9EWOBdFJBZXFAMMoKWXp7Z6krEjBE+Z3bFxsKcp1gOsEfYWhPjCc109MzQ9u7fHTi
-        bK0gZHjw38VrUFkc+HG54APaKkdfX2Svu3vywjUVvvFfbbwz8vtAZqsFddVHn/tQJjGs93w6lfCVnZ4/
-        GpvtG4XM4qJoJO2KAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHgSURBVEhL7ZTf
+        S8JQFMd9LCwCe+ihPyKKwoKeSqJM3O5s9ItK1MpAIivcVlAGSkHQe4/RPxFUBEX0460nlR4K6r2IkiDr
+        draOMq8XYdpL0Bc+bGxnn3s5O5vtP78SSYp1iqJ6DLwBr6KoHAmC5sTb1QVEQyD9BCjDpyCoBMsqi9cb
+        qwfRCyM28yzL8Tostx5BUMY40iIIUUaw3HqgPcs8qRloUxTLrYcQdZwnZRjFcushRGsEwTMjNKE8yXLU
+        geWVBacoVypXc7ABCcuqCy6SNcmz0D4Zb1ceGNN2UdQOQPhlkueBa9qBJK20Ybm14AR9MNIiiKxRSVO+
+        5F31OphKjk3cbNvx8fKBh5dYWQkzMeq/jNNQOmnmMXi72YoafiRJ7QBB2Z17xCU6db7OyvNkog87tagr
+        DfacK87TvxA2ZOQ0Qr0nP+eDhyHqUJuM8+lMkv91ezyrzSDgvdACbvcCHYjPGSJdXjNvp879floLR30R
+        Y4F0UkFlcUAwygpZentnqSsSMET5ndsXGwpynWA6wR9haE+MJzXT0zND27t8dOJsrSBkePDfxWtQWRz4
+        cbngA9oqR19fZK+7e/LCNRW+8V9tvDPy+0BmqwV11Uef+1AmMaz3fDqV8JWdnj8am+0bhcziomgk7YoA
+        AAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAQEAAAAEAIAAoQgAAFgAAACgAAABAAAAAgAAAAAEAIAAAAAAAAEAAALhEAAC4RAAAAAAAAAAA

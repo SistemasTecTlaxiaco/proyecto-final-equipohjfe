@@ -22,14 +22,20 @@ namespace Tienda
         {
             String sql3 = "select precioProducto from productos where idProducto = " + comboBoxProducto.SelectedValue;
             DataRow valor_unit = conexionBBD.getRow(sql3);
+            if (textBoxCantidad.Text != "")
+            {
+                int valor_producto = 0;
+                int cantidad = int.Parse(textBoxCantidad.Text);
+                var v_unit = (int)valor_unit[0];
 
-            int valor_producto = 0;
-            int cantidad = int.Parse(textBoxCantidad.Text);
-            var v_unit = (int)valor_unit[0];
+                valor_producto = v_unit * cantidad;
 
-            valor_producto = v_unit * cantidad;
-
-            dataGridViewTabla.Rows.Add(comboBoxClientes.SelectedValue, comboBoxProducto.SelectedValue, v_unit, cantidad, valor_producto);
+                dataGridViewTabla.Rows.Add(comboBoxClientes.SelectedValue, comboBoxProducto.SelectedValue, v_unit, cantidad, valor_producto);
+            }
+            else
+            {
+                MessageBox.Show("!!!... Error, el campo total factura no puede estar vacio ...!!!");
+            }
         }
 
         public void totalFactura()
@@ -148,11 +154,11 @@ namespace Tienda
             dataGridViewTabla.Columns[4].Name = "Total_producto";
 
             // Set the column header width.
-            dataGridViewTabla.Columns[0].Width = 80;
-            dataGridViewTabla.Columns[1].Width = 90;
+            dataGridViewTabla.Columns[0].Width = 120;
+            dataGridViewTabla.Columns[1].Width = 120;
             dataGridViewTabla.Columns[2].Width = 120;
-            dataGridViewTabla.Columns[3].Width = 60;
-            dataGridViewTabla.Columns[4].Width = 140;
+            dataGridViewTabla.Columns[3].Width = 120;
+            dataGridViewTabla.Columns[4].Width = 130;
 
             //cargar comboBox
             conexionBBD.Conectar();

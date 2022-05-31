@@ -23,19 +23,20 @@ namespace Tienda
             String sql2 = "select CodigoBarra,precioProducto,existenciasProductos from productos where idProducto=" + comboBox1.SelectedValue;
             DataRow fila = conMysql.getRow(sql2);
 
-            String sql3 = (@"select cantidad as xyz from detallesfactura inner join productos on detallesfactura.idProductos=productos.idProducto where productos.idProducto=" + comboBox1.SelectedValue);
+            String sql3 = (@"select cantidad as Cant_vendidas from detallesfactura inner join productos on detallesfactura.idProductos=productos.idProducto where productos.idProducto=" + comboBox1.SelectedValue);
             DataRow cant_vendidas = conMysql.getRow(sql3);
 
-            if (sql3 == null)
+            if (cant_vendidas != null)
             {
-                MessageBox.Show("No hay ventas de este producto");
-            }
-            else
-            {
+                
                 int canVen = (int)cant_vendidas[0];
                 var canIni = (int)fila[2];
                 int canFinal = canIni - canVen;
                 dataGridView1.Rows.Add(comboBox1.SelectedValue, fila[0], comboBox1.Text, fila[1], fila[2], cant_vendidas[0], canFinal);
+            }
+            else
+            {
+                MessageBox.Show("No hay ventas de este producto");
             }
         }
 
@@ -64,9 +65,9 @@ namespace Tienda
 
 
             // Set the column header width.
-            dataGridView1.Columns[0].Width = 80;
-            dataGridView1.Columns[1].Width = 80;
-            dataGridView1.Columns[2].Width = 120;
+            dataGridView1.Columns[0].Width = 40;
+            dataGridView1.Columns[1].Width = 100;
+            dataGridView1.Columns[2].Width = 170;
             dataGridView1.Columns[3].Width = 100;
             dataGridView1.Columns[4].Width = 100;
             dataGridView1.Columns[5].Width = 100;
@@ -75,7 +76,7 @@ namespace Tienda
             //cargar comboBox
             conMysql.Conectar();
             String sql = "select idProducto,descripcionProducto from productos";
-            conMysql.CargarCombo(comboBox1, sql, "descripcionProductos", "idProducto");
+            conMysql.CargarCombo(comboBox1, sql, "descripcionProducto", "idProducto");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
