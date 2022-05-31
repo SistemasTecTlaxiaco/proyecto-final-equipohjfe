@@ -77,10 +77,12 @@ namespace Tienda
                 {
                     int cant = Int32.Parse(listView1.Items[posRepetido].SubItems[3].Text);
                     int exist = Int32.Parse(lstProducto[4].ToString());
+                    int precio = Int32.Parse(listView1.Items[posRepetido].SubItems[2].Text);
                     if (cant < exist)//comprobar que no exeda la cantidad
                     {
                         cant++;
-                        listView1.Items[posRepetido].SubItems[3].Text = cant.ToString();
+                        listView1.Items[posRepetido].SubItems[3].Text = cant.ToString(); //actualizar cantidad a comprar
+                        listView1.Items[posRepetido].SubItems[4].Text = (cant* precio).ToString();//actualizar precio
                     }
                     else if (cant >= exist)
                     {
