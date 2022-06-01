@@ -92,6 +92,15 @@ namespace Tienda
             corte.Show();// Abrir el Foirmulario Productos
         }
 
+        public void VerPersonal()
+        {
+            CloseAll();
+            Personal personal= new Personal();
+            personal.MdiParent = this; //especificar que el formulario es un formulario secundario.
+            personal.WindowState = FormWindowState.Maximized;//Maximizar formulario al iniciar
+            personal.Show();// Abrir el Foirmulario personal
+        }
+
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VerProductos();
@@ -135,6 +144,11 @@ namespace Tienda
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void personalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VerPersonal();
         }
     }
 }
